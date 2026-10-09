@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MCQ Practice</title>
+
+const JSON_URL = "questions.json";   // change name if your file is different
+  
 <style>
 :root{
   --bg:#0f172a; --card:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8;
@@ -278,33 +281,39 @@ function jsonp(url) {
 }
 
 async function loadBlog() {
-  const base = blogBase();
-  if (!base) { loadState = "nodb"; applyWorking(); render(); return; }
   loadState = "loading";
+  render();   // show loading state
+
   try {
-    const d = await jsonp(base + "/feeds/pages/default?alt=json-in-script&max-results=150&_=" + Date.now());
-    const entries = (d.feed && d.feed.entry) || [];
-    const want = CFG.title.trim().toLowerCase();
-    const e = entries.find(x => x.title && String(x.title.$t).trim().toLowerCase() === want);
-    const html = e && e.content ? e.content.$t : "";
-    const text = new DOMParser().parseFromString(html || "", "text/html").body.textContent.replace(/\u00a0/g, " ").trim();
-    if (!text) { blogList = []; bankInfo = null; loadState = "empty"; }
-    else {
-      blogList = normalize(JSON.parse(text));
-      bankInfo = { updated: e.updated && e.updated.$t, count: blogList.length };
-      loadState = "ready";
-    }
+    const res = await fetch(JSON_URL + "?t=" + Date.now());  // cache-bust
+    if (!res.ok) throw new Error("HTTP " + res.status);
+
+    const data = await res.json();
+    blogList = normalize(data);          // uses the existing normalize() function
+    bankInfo = {
+      updated: null,
+      count: blogList.length,
+      name: JSON_URL
+    };
+    loadState = blogList.length ? "ready" : "empty";
   } catch (err) {
-    blogList = []; bankInfo = null;
+    blogList = [];
+    bankInfo = null;
     loadState = "error";
-    loadError = err instanceof SyntaxError
-      ? `The page "${CFG.title}" does not contain valid JSON.`
-      : errText(err) + ` Check that a published page named "${CFG.title}" exists and that Settings → Site feed is set to Full.`;
+    loadError = errText(err) + " — Make sure questions.json is in the same folder as index.html and is valid JSON.";
   }
-  if (draft && blogList.length && same(draft, blogList)) { draft = null; clearDraft(); }
+
+  // Clear draft if it matches the live data
+  if (draft && blogList.length && same(draft, blogList)) {
+    draft = null;
+    clearDraft();
+  }
+
   applyWorking();
   render();
 }
+
+  
 
 /* ───────── Admin login ───────── */
 function login(user, pass) {
