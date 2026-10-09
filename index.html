@@ -148,7 +148,7 @@ const LETTERS = ["A", "B", "C", "D"];
 /* Settings come from the iframe tag on the blog page (data-user, data-pass, data-title, data-blog).
    These defaults are only used when this file is opened on its own for testing. */
 const CFG = (function () {
-  const d = { user: "admin", pass: "admin123", title: "mcq-data", blog: "" };
+  const d = { user: "admin", pass: "admin123", title: "mcq-data", blog: "https://doninternationalwebsite.blogspot.com" };
   try {
     const ds = window.frameElement && window.frameElement.dataset;
     if (ds) {
