@@ -67,14 +67,47 @@ const header = (title, sub) =>
   `<h2 class="title">${esc(title)}</h2>${sub ? `<p class="sub">${esc(sub)}</p>` : `<div style="height:16px"></div>`}`;
 const notice = (text, kind = "info") => `<div class="notice ${kind}">${esc(text)}</div>`;
 
+/* ───────── Rich text for passages and questions (NEW) ─────────
+   Plain lines become paragraphs. Lines that start with "|" become a table, e.g.
+       | List-I        | List-II          |
+       |---------------|------------------|
+       | A. SDG 5      | 2. Gender Equality |
+   Everything is escaped, so the JSON can never inject HTML. */
+const hasTable = t => /^\s*\|/m.test(String(t));
+function richText(text) {
+  const isSep = r => r.every(c => /^:?-{2,}:?$/.test(c));
+  let out = "", para = [], rows = [];
+  const flushPara = () => { if (para.length) { out += `<p>${esc(para.join("\n"))}</p>`; para = []; } };
+  const flushRows = () => {
+    if (!rows.length) return;
+    const head = rows.length > 1 && isSep(rows[1]);
+    const body = rows.filter(r => !isSep(r));
+    out += `<div class="tscroll"><table class="ptable">` + body.map((r, i) =>
+      `<tr>${r.map(c => i === 0 && head ? `<th>${esc(c)}</th>` : `<td>${esc(c)}</td>`).join("")}</tr>`).join("") + `</table></div>`;
+    rows = [];
+  };
+  String(text).replace(/\r/g, "").split("\n").forEach(line => {
+    const t = line.trim();
+    if (t.startsWith("|")) { flushPara(); rows.push(t.replace(/^\||\|$/g, "").split("|").map(c => c.trim())); }
+    else { flushRows(); if (t === "") flushPara(); else para.push(line); }
+  });
+  flushPara(); flushRows();
+  return out;
+}
+/* Question text: unchanged markup for plain questions, table-aware only when a "|" row is present */
+const questionHtml = t => hasTable(t)
+  ? `<div class="qbig qrich rich">${richText(t)}</div>`
+  : `<p class="qbig">${esc(t)}</p>`;
+
 function qcard(q, showAnswer = true) {
   const opts = LETTERS.map(l => {
     const ok = showAnswer && l === q.answer;
     return `<div class="${ok ? "correct" : ""}">${l}. ${esc(q.options[l])}${ok ? "  ✓" : ""}</div>`;
   }).join("");
   return `<div class="card qcard">
-    <div class="qtop"><span class="qid">ID #${q.id}</span>${showAnswer ? `<span class="badge">Answer: ${q.answer}</span>` : ""}</div>
-    <div class="qtext">${esc(q.question)}</div>
+    <div class="qtop"><span class="qid">ID #${q.id}${q.group ? ` · Set ${esc(q.group)}` : ""}</span>${showAnswer ? `<span class="badge">Answer: ${q.answer}</span>` : ""}</div>
+    ${hasTable(q.question) ? `<div class="qtext qrich rich">${richText(q.question)}</div>` : `<div class="qtext">${esc(q.question)}</div>`}
+    ${q.passage ? `<details class="qpassage"><summary>Show passage</summary><div class="rich">${richText(q.passage)}</div></details>` : ""}
     <div class="qopts">${opts}</div></div>`;
 }
 
@@ -88,14 +121,53 @@ const optionInputs = (prefix, starred) => LETTERS.map(l =>
 function normalize(data) {
   if (!Array.isArray(data) && data && Array.isArray(data.questions)) data = data.questions;
   if (!Array.isArray(data)) throw new Error("The file must contain a list of questions.");
-  return data.map((q, i) => {
+
+  /* Step 1 (NEW) – flatten passage sets.
+     A set looks like  { "passage": "...", "title": "...", "questions": [ {question, options, answer}, ... ] }
+     and becomes several ordinary questions that share the same `group` id and `passage`.
+     Ordinary questions pass through untouched, so the old format keeps working. */
+  const flat = [];
+  data.forEach((item, i) => {
     const n = i + 1;
-    if (!q || typeof q !== "object") throw new Error(`Item ${n} is not a question object.`);
-    if (typeof q.question !== "string" || !q.question.trim()) throw new Error(`Item ${n} has no "question" text.`);
-    if (!q.options || LETTERS.some(l => typeof q.options[l] !== "string")) throw new Error(`Item ${n} needs options A, B, C and D.`);
-    if (!LETTERS.includes(q.answer)) throw new Error(`Item ${n} needs an "answer" of A, B, C or D.`);
-    return { ...q, id: q.id === undefined ? n : Number(q.id) };
+    if (item && typeof item === "object" && Array.isArray(item.questions)) {
+      if (typeof item.passage !== "string" || !item.passage.trim()) throw new Error(`Item ${n} is a passage set, so it needs "passage" text.`);
+      if (!item.questions.length) throw new Error(`Item ${n} is a passage set with no questions inside it.`);
+      const group = String(item.group !== undefined ? item.group : "set" + n);
+      item.questions.forEach((sub, j) => {
+        const extra = { group, passage: item.passage };
+        if (typeof item.title === "string" && item.title.trim()) extra.passageTitle = item.title;
+        flat.push({ label: `Item ${n} (question ${j + 1} of the set)`, q: (sub && typeof sub === "object") ? { ...sub, ...extra } : sub });
+      });
+    } else flat.push({ label: `Item ${n}`, q: item });
   });
+
+  /* Step 2 – the original checks. Missing ids are filled in without clashing with explicit ones. */
+  const used = new Set(flat.filter(f => f.q && f.q.id !== undefined).map(f => Number(f.q.id)));
+  const list = flat.map(({ label, q }, k) => {
+    if (!q || typeof q !== "object") throw new Error(`${label} is not a question object.`);
+    if (typeof q.question !== "string" || !q.question.trim()) throw new Error(`${label} has no "question" text.`);
+    if (!q.options || LETTERS.some(l => typeof q.options[l] !== "string")) throw new Error(`${label} needs options A, B, C and D.`);
+    if (!LETTERS.includes(q.answer)) throw new Error(`${label} needs an "answer" of A, B, C or D.`);
+    if (q.passage !== undefined && typeof q.passage !== "string") throw new Error(`${label} has a "passage" that is not text.`);
+    let id;
+    if (q.id !== undefined) id = Number(q.id);
+    else { id = k + 1; while (used.has(id)) id++; used.add(id); }
+    const out = { ...q, id };
+    if (out.group !== undefined && out.group !== null && String(out.group) !== "") out.group = String(out.group);
+    else delete out.group;
+    return out;
+  });
+
+  /* Step 3 (NEW) – flat files may repeat `group` and give the passage only once: share it with the whole group. */
+  const info = new Map();
+  list.forEach(q => { if (q.group && q.passage && !info.has(q.group)) info.set(q.group, { passage: q.passage, title: q.passageTitle }); });
+  list.forEach(q => {
+    const g = q.group && info.get(q.group);
+    if (!g) return;
+    if (!q.passage) q.passage = g.passage;
+    if (q.passage === g.passage && !q.passageTitle && g.title) q.passageTitle = g.title;
+  });
+  return list;
 }
 
 
@@ -235,6 +307,7 @@ function render() {
   if (!isAdmin) allowed.push("login");
   if (!allowed.includes(current)) current = "dashboard";
   document.querySelectorAll("#nav button").forEach(b => b.classList.toggle("active", b.dataset.page === current));
+  page.classList.remove("wide");   // NEW: only passage questions use the wide two-column layout (quizActive turns it on)
   PAGES[current]();
   updateSide();
 }
@@ -477,14 +550,27 @@ function startQuiz(list, retest) {
   quiz = freshQuiz();
   quiz.active = true;
   quiz.retest = retest;
-  quiz.list = shuffle(list);
+  quiz.list = shuffleKeepingSets(list);
+}
+
+/* NEW: questions of one passage set stay together and in their original order;
+   standalone questions and whole sets are shuffled as units (old behaviour for plain questions). */
+function shuffleKeepingSets(list) {
+  const units = [], byGroup = new Map();
+  list.forEach(q => {
+    if (!q.group) { units.push([q]); return; }
+    if (!byGroup.has(q.group)) { const u = []; byGroup.set(q.group, u); units.push(u); }
+    byGroup.get(q.group).push(q);
+  });
+  return shuffle(units).flat();
 }
 function startFullQuiz() { startQuiz(questions, false); go("quiz"); }
 
 function quizMenu() {
   let h = header("Take Quiz", "Randomized questions with shuffled options");
   if (!questions.length) { page.innerHTML = h + (bankProblem() || notice("No questions available.", "warn")); return; }
-  h += notice(`${questions.length} questions ready. Options will be shuffled every time.`, "info");
+  const sets = new Set(questions.filter(q => q.group).map(q => q.group)).size;   // NEW
+  h += notice(`${questions.length} questions ready. Options will be shuffled every time.${sets ? ` ${sets} passage set(s) are kept together.` : ""}`, "info");
   h += `<button class="btn block" id="qStart" style="margin-top:10px">Start Full Quiz</button>`;
   page.innerHTML = h;
   $("#qStart").onclick = startFullQuiz;
@@ -504,14 +590,27 @@ function quizActive() {
   const { options, correct } = quiz.opts;
   const done = quiz.answered;
 
+  /* NEW – passage sets: the passage stays visible next to (or above, on phones) every sub-question of its set */
+  const hasPassage = !!(q.passage && q.passage.trim());
+  let setBadge = "";
+  if (q.group) {
+    const members = quiz.list.filter(x => x.group === q.group);
+    if (members.length > 1) setBadge = `<span class="setbadge">Passage set · part ${members.indexOf(q) + 1} of ${members.length}</span>`;
+  }
+  /* keep the passage scroll position when Submit / Next re-draw the page inside the same set */
+  const oldPanel = page.querySelector(".passage");
+  const keepScroll = (hasPassage && oldPanel && oldPanel.dataset.group === String(q.group)) ? oldPanel.scrollTop : 0;
+
   let h = header("Take Quiz");
-  h += `<div class="bar"><div style="width:${total ? (quiz.idx / total) * 100 : 0}%"></div></div>
-    <div style="font-weight:bold">Question ${quiz.idx + 1} of ${total}</div>
+  h += `<div class="bar"><div style="width:${total ? (quiz.idx / total) * 100 : 0}%"></div></div>`;
+
+  let body = `<div style="font-weight:bold">Question ${quiz.idx + 1} of ${total}</div>
     <div class="muted" style="font-size:13px;margin-bottom:16px">${quiz.retest ? "Retest mode" : "Full quiz"} &nbsp;•&nbsp; Score so far: ${quiz.score}</div>
-    <p class="qbig">${esc(q.question)}</p>
+    ${setBadge}
+    ${questionHtml(q.question)}
     <div class="muted" style="font-size:12px;margin:2px 0 14px">ID: ${q.id}</div>`;
 
-  h += Object.entries(options).map(([l, text]) => {
+  body += Object.entries(options).map(([l, text]) => {
     let cls = "";
     if (done) cls = l === correct ? " good" : (l === quiz.chosen ? " bad" : "");
     return `<label class="opt${done ? " locked" : ""}${cls}">
@@ -519,19 +618,31 @@ function quizActive() {
       <span>${l}.&nbsp; ${esc(text)}</span></label>`;
   }).join("");
 
-  h += `<div id="qAction" style="margin-top:14px">`;
+  body += `<div id="qAction" style="margin-top:14px">`;
   if (!done) {
-    h += `<button class="btn block" id="qSubmit">Submit Answer</button>`;
+    body += `<button class="btn block" id="qSubmit">Submit Answer</button>`;
   } else {
-    if (quiz.chosen === correct) h += notice(`Correct! The answer is ${correct}. ${options[correct]}`, "success");
-    else h += notice(`Wrong. You chose ${quiz.chosen}. ${options[quiz.chosen]}`, "error") +
+    if (quiz.chosen === correct) body += notice(`Correct! The answer is ${correct}. ${options[correct]}`, "success");
+    else body += notice(`Wrong. You chose ${quiz.chosen}. ${options[quiz.chosen]}`, "error") +
               notice(`Correct answer: ${correct}. ${options[correct]}`, "info");
-    h += quiz.idx + 1 < total
+    body += quiz.idx + 1 < total
       ? `<button class="btn block" id="qNext" style="margin-top:8px">Next Question  →</button>`
       : `<button class="btn block" id="qFinish" style="margin-top:8px">Finish Quiz</button>`;
   }
-  h += `</div>`;
+  body += `</div>`;
+
+  if (hasPassage) {
+    h += `<div class="qlayout">
+      <aside class="passage" data-group="${esc(q.group)}" aria-label="Passage">
+        <h4>${esc(q.passageTitle || "Passage")}</h4><div class="rich">${richText(q.passage)}</div>
+      </aside>
+      <div class="qcol">${body}</div></div>`;
+  } else {
+    h += body;   // plain question: exactly the same markup as before
+  }
+  page.classList.toggle("wide", hasPassage);
   page.innerHTML = h;
+  if (keepScroll) { const np = page.querySelector(".passage"); if (np) np.scrollTop = keepScroll; }
 
   if (!done) {
     $("#qSubmit").onclick = () => {
@@ -544,7 +655,7 @@ function quizActive() {
       else {
         quiz.wrong.push(q);
         quiz.details.push({
-          id: q.id, question: q.question,
+          id: q.id, question: q.question, passage: q.passage || "",
           yourAnswer: `${user}. ${options[user]}`, correctAnswer: `${correct}. ${options[correct]}`,
         });
       }
@@ -570,7 +681,7 @@ function quizResults() {
   if (quiz.details.length) {
     h += `<h3>Review Wrong Answers</h3>` + quiz.details.map((w, i) => `
       <div class="card wrong-card"><div class="q">${i + 1}. [ID: ${w.id}] ${esc(w.question)}</div>
-      <div class="y">Your answer: ${esc(w.yourAnswer)}</div><div class="a">Correct: ${esc(w.correctAnswer)}</div></div>`).join("");
+      <div class="y">Your answer: ${esc(w.yourAnswer)}</div><div class="a">Correct: ${esc(w.correctAnswer)}</div>${w.passage ? `<details class="qpassage"><summary>Show passage</summary><div class="rich">${richText(w.passage)}</div></details>` : ""}</div>`).join("");
     h += `<h3 style="margin-bottom:0">Retest Wrong Questions</h3>
       <p class="muted" style="margin:0 0 8px;font-size:13px">${quiz.wrong.length} question(s) left to master</p>
       <button class="btn block" id="qRetest">Retest Only Wrong Ones</button>`;
