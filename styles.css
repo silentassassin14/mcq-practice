@@ -116,3 +116,6 @@ ol.steps{padding-left:20px;margin-top:0}
 ol.steps li{margin-bottom:6px}
 .drop{outline:2px dashed var(--accent);outline-offset:-8px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Pure white text on the main quiz buttons */
+#qaStart,#qStart,#qSubmit,#qNext{color:#ffffff}
