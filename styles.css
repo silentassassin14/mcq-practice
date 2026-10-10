@@ -1,6 +1,6 @@
 :root{
-  --bg:#000000; --card:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8;
-  --accent:#38bdf8; --purple:#818cf8; --green:#34d399; --red:#f87171;
+  --bg:#000000; --card:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#ffffff;
+  --accent:#ff0000; --purple:#ff0000; --green:#34d399; --red:#f87171;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--text);
@@ -67,7 +67,7 @@ select{width:auto;min-width:160px}
 .notice.info{background:#0c2d48;color:#7dd3fc}
 .notice.warn{background:#422006;color:#fcd34d}
 .notice.success{background:#065f46;color:#6ee7b7}
-.notice.error{background:#7f1d1d;color:#fca5a5}
+.notice.error{background:#ff0000;color:#ffffff}
 .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:20px}
 .metric{border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center}
 .metric .v{font-size:30px;font-weight:bold}
@@ -109,7 +109,7 @@ select{width:auto;min-width:160px}
 .toast.info{background:#0c2d48;color:#7dd3fc}
 .toast.warn{background:#422006;color:#fcd34d}
 .toast.success{background:#065f46;color:#6ee7b7}
-.toast.error{background:#7f1d1d;color:#fca5a5}
+.toast.error{background:#ff0000;color:#ffffff}
 .linkbtn{background:none;border:0;color:var(--muted);cursor:pointer;font-size:12px;text-decoration:underline;padding:6px 0 0}
 .linkbtn:hover{color:var(--text)}
 ol.steps{padding-left:20px;margin-top:0}
