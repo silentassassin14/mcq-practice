@@ -243,7 +243,7 @@ function render() {
 const PAGES = {
   dashboard() {
     let h = header("MCQ Practice Software", "Practice with randomized quizzes");
-    h += `<div class="metrics">${metric(questions.length, "Questions", "var(--accent)")}${metric("∞", "Practice Mode", "var(--purple)")}${metric("✓", "Retest Support", "var(--green)")}</div>`;
+    h += `<div class="metrics">${metric(questions.length, "Questions", "var(--accent)")}${metric("∞", "Practice Mode", "#ffffff")}${metric("✓", "Retest Support", "var(--green)")}</div>`;
     h += `<h3 style="margin-top:0">Quick Actions</h3><div class="actions">
       <button class="btn" id="qaStart" ${questions.length ? "" : "disabled"}>Start Quiz</button>
       <button class="btn secondary" id="qaView">View Bank</button>
