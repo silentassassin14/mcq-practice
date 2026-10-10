@@ -584,6 +584,136 @@ function quizResults() {
   $("#qBack").onclick = () => { quiz = freshQuiz(); go("quiz"); };
 }
 
+/* ═════════════════════════════════════════════════════════════════════
+   KEYBOARD NAVIGATION FOR THE QUIZ  (new code – nothing above this line was changed)
+
+   Keys (only while a question is on screen):
+     A / B / C / D  → select that option (case-insensitive)
+     ↑ / ↓          → move the highlight (also selects, wraps around)
+     Enter / Space  → submit the highlighted option
+                      (after answering: go to Next Question / Finish)
+
+   How it hooks into the existing code (no existing function is modified):
+     • quiz / current / page ........ existing state + the #page container
+     • LETTERS ...................... maps keys to the option letters
+     • label.opt (not .locked) ...... the option rows built by quizActive()
+     • input[name="opt"] ............ the radio inputs; qSubmit reads :checked
+     • #qSubmit / #qNext / #qFinish . existing buttons – we simply .click() them,
+                                      so scoring and rendering stay untouched
+   ═════════════════════════════════════════════════════════════════════ */
+const KB_CLASS = "quiz-option-focused";
+let kbAbort = null;   // lets us remove every listener in one call
+
+/* 1) Highlight style, injected once so no .css file needs editing */
+function injectKbStyles() {
+  if (document.getElementById("quiz-kb-style")) return;
+  const st = document.createElement("style");
+  st.id = "quiz-kb-style";
+  st.textContent = `
+    label.opt.${KB_CLASS} {
+      outline: 3px solid var(--accent, #38bdf8);
+      outline-offset: 2px;
+      background: rgba(56, 189, 248, 0.16);
+      box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.22), 0 4px 14px rgba(0, 0, 0, 0.25);
+      transform: translateX(4px);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+    label.opt.${KB_CLASS} span { font-weight: 600; }
+  `;
+  document.head.appendChild(st);
+}
+
+/* 2) Helpers – the highlight lives only in the DOM, so when quizActive()
+      rebuilds the page for the next question it is cleared automatically
+      (no stale index, no leftover state). */
+const kbOptions = () => [...page.querySelectorAll("label.opt:not(.locked)")];
+const kbRadio = label => label.querySelector('input[name="opt"]');
+
+function kbCurrentIndex(labels) {
+  let i = labels.findIndex(l => l.classList.contains(KB_CLASS));
+  if (i < 0) i = labels.findIndex(l => kbRadio(l) && kbRadio(l).checked);   // e.g. picked with the mouse
+  return i;
+}
+
+function kbSetFocus(labels, i) {
+  labels.forEach((l, n) => l.classList.toggle(KB_CLASS, n === i));
+  const label = labels[i];
+  if (!label) return;
+  const radio = kbRadio(label);
+  if (radio) radio.checked = true;            // so the existing #qSubmit handler sees it
+  label.scrollIntoView({ block: "nearest" });
+}
+
+/* 3) The single key handler */
+function onQuizKey(e) {
+  if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (current !== "quiz" || !quiz.active || quiz.results) return;   // quiz screen only
+
+  // Leave typing fields and real buttons/links alone (they handle Enter/Space natively)
+  const t = e.target;
+  if (t && t.closest && t.closest("textarea, select, button, a, [contenteditable='true'], input:not([type='radio'])")) return;
+
+  const key = e.key;
+  const isConfirm = key === "Enter" || key === " " || key === "Spacebar";
+
+  /* Question answered → Enter/Space moves on */
+  if (quiz.answered) {
+    if (!isConfirm) return;
+    e.preventDefault();
+    if (e.repeat) return;                       // holding the key must not skip questions
+    const next = $("#qNext") || $("#qFinish");
+    if (next) next.click();
+    return;
+  }
+
+  const labels = kbOptions();
+  if (!labels.length) return;
+
+  /* A–D */
+  if (key.length === 1 && LETTERS.includes(key.toUpperCase())) {
+    const i = labels.findIndex(l => kbRadio(l) && kbRadio(l).value === key.toUpperCase());
+    if (i >= 0) { e.preventDefault(); kbSetFocus(labels, i); }
+    return;
+  }
+
+  /* ↑ / ↓ */
+  if (key === "ArrowDown" || key === "ArrowUp") {
+    e.preventDefault();
+    const cur = kbCurrentIndex(labels);
+    const step = key === "ArrowDown" ? 1 : -1;
+    const next = cur < 0 ? (step === 1 ? 0 : labels.length - 1)
+                         : (cur + step + labels.length) % labels.length;
+    kbSetFocus(labels, next);
+    return;
+  }
+
+  /* Enter / Space → reuse the existing Submit button (it shows its own
+     "Please choose an option first." toast if nothing is selected) */
+  if (isConfirm) {
+    e.preventDefault();
+    if (e.repeat) return;
+    const btn = $("#qSubmit");
+    if (btn) btn.click();
+  }
+}
+
+/* Keep the highlight in sync when the user clicks an option with the mouse */
+function onQuizChange(e) {
+  if (!e.target || e.target.name !== "opt") return;
+  kbOptions().forEach(l => l.classList.toggle(KB_CLASS, l.contains(e.target)));
+}
+
+/* 4) Install once; calling it again first removes the old listeners (no duplicates/leaks) */
+function installQuizKeyboard() {
+  if (kbAbort) kbAbort.abort();
+  kbAbort = new AbortController();
+  const { signal } = kbAbort;
+  injectKbStyles();
+  document.addEventListener("keydown", onQuizKey, { signal });
+  page.addEventListener("change", onQuizChange, { signal });   // #page is permanent; its children are replaced
+  window.addEventListener("pagehide", () => kbAbort && kbAbort.abort(), { once: true, signal });
+}
+
 /* ───────── Init ───────── */
 /* Local-file fallback: only used when the page cannot reach a blog (e.g. opened as a plain file for testing) */
 $("#localInput").onchange = async e => {
@@ -605,5 +735,6 @@ try { isAdmin = sessionStorage.getItem(SESSION_KEY) === "1"; } catch (e) {}
 draft = getDraft();
 buildNav();
 applyWorking();
+installQuizKeyboard();   // keyboard navigation (see block above)
 render();
 loadBlog();
