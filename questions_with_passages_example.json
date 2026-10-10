@@ -1,0 +1,59 @@
+[
+  {
+    "question": "Which of these is the SI unit of pressure?",
+    "options": { "A": "Pascal", "B": "Joule", "C": "Newton", "D": "Watt" },
+    "answer": "A"
+  },
+
+  {
+    "group": "ocean-currents",
+    "title": "Directions (Q1–3): Read the passage and answer the questions",
+    "passage": "Ocean currents are driven by two broad mechanisms. Wind-driven currents occupy the upper few hundred metres and are organised into large gyres by the Coriolis effect and the shape of the ocean basins.\n\nThermohaline circulation, in contrast, is driven by differences in water density, which depends on temperature and salinity. Cold, salty water at high latitudes sinks and spreads slowly along the ocean floor. Together, the two systems carry heat from the tropics towards the poles and influence regional climate.",
+    "questions": [
+      {
+        "question": "According to the passage, what mainly drives the thermohaline circulation?",
+        "options": { "A": "Wind stress on the surface", "B": "Differences in water density", "C": "Tidal forces", "D": "The Earth's magnetic field" },
+        "answer": "B"
+      },
+      {
+        "question": "Which kind of current is organised into large gyres?",
+        "options": { "A": "Thermohaline currents", "B": "Deep-water currents", "C": "Wind-driven currents", "D": "Tidal currents" },
+        "answer": "C"
+      },
+      {
+        "question": "What is the combined effect of the two systems, as stated in the passage?",
+        "options": { "A": "They cool the tropics permanently", "B": "They carry heat from the tropics towards the poles", "C": "They stop deep-water formation", "D": "They raise salinity everywhere" },
+        "answer": "B"
+      }
+    ]
+  },
+
+  {
+    "group": "station-table",
+    "title": "Directions (Q4–6): Study the table and answer the questions",
+    "passage": "The table shows the surface temperature and salinity measured at four stations.\n\n| Station | Temperature (°C) | Salinity (psu) |\n|---|---|---|\n| S1 | 28 | 34 |\n| S2 | 24 | 35 |\n| S3 | 20 | 36 |\n| S4 | 16 | 35 |\n\nNote: psu = practical salinity unit.",
+    "questions": [
+      {
+        "question": "What is the average temperature of the four stations?",
+        "options": { "A": "20 °C", "B": "22 °C", "C": "24 °C", "D": "26 °C" },
+        "answer": "B"
+      },
+      {
+        "question": "Which station has the highest salinity?",
+        "options": { "A": "S1", "B": "S2", "C": "S3", "D": "S4" },
+        "answer": "C"
+      },
+      {
+        "question": "The temperature at S1 is what percentage higher than the temperature at S4?",
+        "options": { "A": "50%", "B": "60%", "C": "75%", "D": "80%" },
+        "answer": "C"
+      }
+    ]
+  },
+
+  {
+    "question": "Match List I with List II.\n\n| List I (Current) | List II (Description) |\n|---|---|\n| A. Gulf Stream | 1. Warm current of the North Atlantic |\n| B. Kuroshio | 2. Warm current of the North Pacific |\n| C. Humboldt | 3. Cold current off western South America |\n| D. Benguela | 4. Cold current off south-western Africa |\n\nChoose the correct answer:",
+    "options": { "A": "A-1, B-2, C-3, D-4", "B": "A-2, B-1, C-3, D-4", "C": "A-1, B-2, C-4, D-3", "D": "A-3, B-4, C-1, D-2" },
+    "answer": "A"
+  }
+]
