@@ -1,0 +1,566 @@
+[
+  {
+    "group": "passage-research-ethics",
+    "title": "Directions (Q1-5): Read the following passage and answer the questions",
+    "passage": "In contemporary academia, the issue of plagiarism and research ethics has become increasingly important. Plagiarism, broadly defined as the appropriation of another person’s ideas, words, or intellectual output without proper acknowledgment, is not merely a matter of academic misconduct but a violation of the fundamental principles of intellectual honesty. With the increasing availability of vast amounts of online resources, the temptation to copy and paste has grown, making plagiarism detection and prevention central to academic life. Universities worldwide have adopted strict policies, employing plagiarism detection software such as Turnitin and iThenticate to safeguard originality.\n\nResearch ethics, however, goes beyond plagiarism. It encompasses a wide spectrum of principles: ensuring the dignity and privacy of participants, avoiding falsification or fabrication of data, and maintaining transparency in methodology and reporting. Ethical frameworks such as the Belmont Report stress three core values: respect for persons, beneficence, and justice. These guidelines ensure that research contributes positively to society without exploiting individuals or communities.\n\nAt the same time, new challenges have emerged in the age of digital technology and artificial intelligence (AI). While AI tools can assist researchers in editing, structuring, or visualising data, their misuse—such as generating entire theses or paraphrasing existing content without attribution—raises fresh ethical dilemmas. Institutions now emphasise training in research integrity, urging students and scholars to cultivate critical thinking, originality, and responsibility.\n\nUltimately, research without ethics risks losing credibility and trust. A robust academic community depends not only on innovation but also on the assurance that knowledge is produced honestly, with due respect to both intellectual property and human values.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "According to the passage, plagiarism is best understood as:",
+        "options": {
+          "A": "Using AI tools for data visualisation.",
+          "B": "Copying another’s work without acknowledgement.",
+          "C": "Publishing articles in open-access journals.",
+          "D": "Researching human participants"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 2,
+        "question": "Which ethical principle is NOT mentioned in the passage as part of the Belmont Report?",
+        "options": {
+          "A": "Respect for persons",
+          "B": "Beneficence",
+          "C": "Justice",
+          "D": "Confidentiality"
+        },
+        "answer": "D"
+      },
+      {
+        "id": 3,
+        "question": "Which software is most commonly used by universities to detect plagiarism?",
+        "options": {
+          "A": "EndNote",
+          "B": "Turnitin",
+          "C": "NVivo",
+          "D": "SPSS"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 4,
+        "question": "What is identified in the passage as a new ethical challenge in the digital age?",
+        "options": {
+          "A": "Increasing collaboration among disciplines",
+          "B": "Using AI to generate academic work without attribution",
+          "C": "Limited access to online resources",
+          "D": "The rising cost of higher education"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 5,
+        "question": "What does the passage emphasise as the ultimate foundation of credible research?",
+        "options": {
+          "A": "Speed and efficiency",
+          "B": "Ethical responsibility and honesty",
+          "C": "Technological advancement",
+          "D": "Access to funding and infrastructure"
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Interpretivism is an epistemology which contrasts",
+    "options": {
+      "A": "Hermeneutics",
+      "B": "Subjectivism",
+      "C": "Positivism",
+      "D": "Phenomenology"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 7,
+    "question": "If m² + n² = 20 and n = m + 2, then the value of (m⁴ + n⁴) is:",
+    "options": {
+      "A": "240",
+      "B": "256",
+      "C": "272",
+      "D": "288"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 8,
+    "question": "'Kinesics', 'Proxemics', and 'Haptics' are sub-types of:",
+    "options": {
+      "A": "Verbal Communication",
+      "B": "Para-language",
+      "C": "Non-verbal Communication",
+      "D": "Mass Communication"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 9,
+    "question": "What is Grapevine communication?",
+    "options": {
+      "A": "Corporate Communication",
+      "B": "Agri-based Communication",
+      "C": "Formal Communication",
+      "D": "Informal Communication"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 10,
+    "question": "Arrange the following communication models in the correct chronological order of their development:\n1. Shannon-Weaver Model\n2. Lasswell's Model\n3. Berlo's S-M-C-R Model\n4. Aristotle's Model",
+    "options": {
+      "A": "4, 2, 1, 3",
+      "B": "2, 4, 1, 3",
+      "C": "4, 1, 2, 3",
+      "D": "1, 2, 3, 4"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 11,
+    "question": "Given below are two statements:\nStatement I: Propagandic communication at the National level is supposed to recognized the fact that truth need not be separated from falsehood.\nStatement II: The mediated propaganda process blurs truth and falsehood in order to be persuasive.\nIn the light of the above statements, choose the correct answer from the options given below",
+    "options": {
+      "A": "Both statement I and statement II are true",
+      "B": "Both statement I and statement II are false",
+      "C": "Statement I is true but Statement II is false",
+      "D": "Statement I is false but Statement II is true"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 12,
+    "question": "Match the following SDGs with the primary global issue they aim to address.\n\n| List-I (SDG) | List-II (Primary Global Issue) |\n|---|---|\n| A. SDG 5 | 1. Climate Action |\n| B. SDG 10 | 2. Gender Equality |\n| C. SDG 13 | 3. Life on Land |\n| D. SDG 15 | 4. Reduced Inequalities |\n",
+    "options": {
+      "A": "A-2, B-1, C-4, D-3",
+      "B": "A-4, B-2, C-3, D-1",
+      "C": "A-2, B-4, C-1, D-3",
+      "D": "A-3, B-4, C-1, D-2"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 13,
+    "question": "Arrange the following environment related acts in the chronological order of their enactment.\nA. The Wildlife Protection Act\nB. Air Prevention and Control of Pollution Act\nC. The National Green Tribunal Act\nD. Environment Protection Act\nE. The Forest Conservation Act\nChoose the correct answer from the options given below :",
+    "options": {
+      "A": "E, A, D, B, C",
+      "B": "A, E, B, D, C",
+      "C": "A, B, E, C, D",
+      "D": "B, E, A, C, D"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 14,
+    "question": "Arrange the following standard operating steps of a cash withdrawal transaction at an ATM in a logical sequence:\nA. Enter the 4-digit Personal Identification Number (PIN).\nB. Select the transaction category (Withdrawal) and account type (Savings/Current).\nC. Collect the cash from the dispenser slot.\nD. Insert the ATM-cum-debit card into the designated slot.\nE. Enter the specific withdrawal amount.",
+    "options": {
+      "A": "D, A, B, E, C",
+      "B": "D, B, A, E, C",
+      "C": "A, D, B, E, C",
+      "D": "D, A, E, B, C"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 15,
+    "question": "Divide ₹4,800 among Ram, Shyam and Kartik in the ratio of 4 : 8 : 3. Find the amount received by Shyam.",
+    "options": {
+      "A": "₹1,850",
+      "B": "₹1,680",
+      "C": "₹2,270",
+      "D": "₹2,560"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 16,
+    "question": "Match the following apex regulatory/governing bodies with the specific higher education sector they primarily oversee.\n\n| List-I (Apex Body) | List-II (Primary Sector of Oversight) |\n|---|---|\n| A. University Grants Commission (UGC) | 1. Regulation of all aspects of technical education including engineering and management. |\n| B. All India Council for Technical Education (AICTE) | 2. Coordination, determination, and maintenance of standards in university education, including granting funds. |\n| C. National Council for Teacher Education (NCTE) | 3. Regulation of medical education and profession. |\n| D. National Medical Commission (NMC) | 4. Regulation of teacher education programs and norms. |\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-2, B-1, C-4, D-3",
+      "C": "A-2, B-1, C-3, D-4",
+      "D": "A-4, B-3, C-2, D-1"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 17,
+    "question": "Match the following committees/policies with their seminal reports or key outcomes:\n\n| List-I (Committee/Policy) | List-II (Report/Key Outcome) |\n|---|---|\n| A- University Education Commission | 1- 'Education and National Development' |\n| B- Education Commission (Kothari) | 2- 'The Report of the University Education Commission' |\n| C- Committee on Renovation of HE | 3- 'Learning: The Treasure Within' |\n| D- Delors Commission (UNESCO) | 4- 'Yash Pal Committee Report' |\n",
+    "options": {
+      "A": "A-2, B-1, C-4, D-3",
+      "B": "A-1, B-2, C-3, D-4",
+      "C": "A-2, B-1, C-3, D-4",
+      "D": "A-1, B-2, C-4, D-3"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 18,
+    "question": "Rohan travels from his home to his office at a speed of 5 km/hr and returns at a speed of 3 km/hr. If he takes 8 hours for the entire journey, find the distance between his home and office.",
+    "options": {
+      "A": "12 km",
+      "B": "15 km",
+      "C": "18 km",
+      "D": "20 km"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 19,
+    "question": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): A firewall is a critical component for securing an educational institution's network.\nReason (R): A firewall acts as a barrier between a trusted internal network and untrusted external networks, such as the internet, filtering incoming and outgoing traffic based on a set of rules.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "A": "Both (A) and (R) are correct and (R) is the correct explanation of (A)",
+      "B": "Both (A) and (R) are correct but (R) is not the correct explanation of (A)",
+      "C": "(A) is correct but (R) is not correct",
+      "D": "(A) is not correct but (R) is correct"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 20,
+    "question": "What is the timeline produced by NEP 2020 to raise GER in higher education to 50%?",
+    "options": {
+      "A": "2025",
+      "B": "2030",
+      "C": "2035",
+      "D": "2040"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 21,
+    "question": "Arrange the following Post-Independence Educational Commissions/Policies in the correct chronological order of their submission/appointment, from the earliest to the latest:\n1. National Knowledge Commission (NKC)\n2. Secondary Education Commission\n3. University Education Commission\n4. Education Commission (Kothari Commission)\nChoose the correct option:",
+    "options": {
+      "A": "3 → 2 → 4 → 1",
+      "B": "2 → 3 → 4 → 1",
+      "C": "3 → 4 → 2 → 1",
+      "D": "4 → 3 → 2 → 1"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 22,
+    "question": "Arrange the following Education Committees chronologically:\nA. Yashpal Committee\nB. Durgabai Deshmukh National Committee on Women's Education\nC. Birla Ambani Report\nD. Janardhan Reddy Committee\nE. Hansa Mehta Committee\nChoose the correct answer from the options given below:",
+    "options": {
+      "A": "A, B, D, E, C",
+      "B": "B, E, D, A, C",
+      "C": "C, A, E, B, D",
+      "D": "C, D, B, E, A"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 23,
+    "question": "Match List - I with List - II.\n\n| List - I (Computer attack/cyber crime) | List - II (Definition) |\n|---|---|\n| A. Worm | I. Misdirecting users to a fraudulent website without their knowledge or consent. |\n| B. Bot | II. A malware that replicates itself in order to spread to other computers across the network. |\n| C. Denial-of-Service | III. Flooding sites with useless traffic to overwhelm a network. |\n| D. Pharming | IV. A malware that responds to external commands sent by an attacker. |\n\nChoose the correct answer from the options given below:",
+    "options": {
+      "A": "A-II, B-IV, C-III, D-I",
+      "B": "A-I, B-III, C-IV, D-II",
+      "C": "A-III, B-II, C-I, D-IV",
+      "D": "A-IV, B-I, C-II, D-III"
+    },
+    "answer": "A"
+  },
+  {
+    "group": "profit-table-2018-2023",
+    "title": "Directions (Q24-28): Study the table and answer the questions",
+    "passage": "The following table shows the percent (%) profit earned by two companies A and B over the six years from 2018 to 2023. Based on the data in the table, answer the questions that follow.\n\nYear-wise Profit details of Two Companies\n\n| Year | Percent (%) Profit Earned by Company A | Percent (%) Profit Earned by Company B |\n|---|---|---|\n| 2018 | 40% | 25% |\n| 2019 | 25% | 30% |\n| 2020 | 30% | 50% |\n| 2021 | 60% | 45% |\n| 2022 | 45% | 30% |\n| 2023 | 50% | 40% |\n\nNote: Profit % = (Income − Expenditure) / Expenditure × 100",
+    "questions": [
+      {
+        "id": 24,
+        "question": "If in the year 2021, the expenditure of Company A was equal to the expenditure of Company B, then what was the ratio of their respective incomes?",
+        "options": {
+          "A": "3 : 2",
+          "B": "32 : 29",
+          "C": "2 : 5",
+          "D": "7 : 5"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 25,
+        "question": "In the year 2022, if the income of Company B was ₹ 52 Crore and the expenditures of both the Companies A and B were the same, then what was the average income of both the companies A and B?",
+        "options": {
+          "A": "₹ 22 Crore",
+          "B": "₹ 33 Crore",
+          "C": "₹ 55 Crore",
+          "D": "₹ 44 Crore"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 26,
+        "question": "In the year 2023, if the income of Company B was ₹ 70 Crores, then what was the expenditure of the Company B in that year?",
+        "options": {
+          "A": "₹ 20 Crore",
+          "B": "₹ 30 Crore",
+          "C": "₹ 40 Crore",
+          "D": "₹ 50 Crore"
+        },
+        "answer": "D"
+      },
+      {
+        "id": 27,
+        "question": "If the ratio of expenditures of Company A in 2019 and 2023 is 4 : 3, then the income of Company A in 2019 is ______% more than the income of Company A in 2023.",
+        "options": {
+          "A": "70/9 %",
+          "B": "80/9 %",
+          "C": "40/9 %",
+          "D": "100/9 %"
+        },
+        "answer": "D"
+      },
+      {
+        "id": 28,
+        "question": "For Company B, if the income in the year 2018 was equal to the expenditure in the year 2020, then what was the ratio of income of B in 2018 to that in 2020?",
+        "options": {
+          "A": "2 : 3",
+          "B": "3 : 2",
+          "C": "2 : 5",
+          "D": "5 : 2"
+        },
+        "answer": "A"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "question": "The registers used inside a CPU are fabricated primarily using which material?",
+    "options": {
+      "A": "Silicon",
+      "B": "Aluminium",
+      "C": "Copper",
+      "D": "Germanium"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 30,
+    "question": "Arrange the following phases of a penetration test (ethical hacking) in the correct sequence:\ni. Gaining Access\nii. Reconnaissance\niii. Reporting\niv. Vulnerability Analysis",
+    "options": {
+      "A": "ii, i, iv, iii",
+      "B": "ii, iv, i, iii",
+      "C": "iv, ii, i, iii",
+      "D": "i, ii, iv, iii"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 31,
+    "question": "Match List - I with List - II.\n\n| List – I (Successive Discounts) | List – II (Equivalent Discount) |\n|---|---|\n| A. 10% & 15% | I. 28% |\n| B. 20% & 30% | II. 32.5% |\n| C. 10% & 20% | III. 23.5% |\n| D. 10% & 25% | IV. 44% |\n\nChoose the correct answer from the options given below :",
+    "options": {
+      "A": "A-I, B-II, C-IV, D-III",
+      "B": "A-II, B-III, C-I, D-IV",
+      "C": "A-III, B-IV, C-I, D-II",
+      "D": "A-IV, B-I, C-II, D-III"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 32,
+    "question": "Match List – I with List – II.\n\n| List – I (Encoding Scheme) | List – II (Number of Bits) |\n|---|---|\n| A. UTF-8 | I. 7 bits |\n| B. ASCII | II. 8, 16, 24, or 32 bits |\n| C. BCD | III. 4 bits |\n| D. Unicode (UTF-32) | IV. 32 bits |\n\nChoose the correct answer:",
+    "options": {
+      "A": "A-II, B-I, C-III, D-IV",
+      "B": "A-I, B-II, C-IV, D-III",
+      "C": "A-III, B-IV, C-I, D-II",
+      "D": "A-IV, B-III, C-II, D-I"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 33,
+    "question": "In Patanjali's Aṣṭāṅga Yoga, the eight constituents are collectively called the Yogāṅgas (limbs of yoga). The last three limbs — which are internal (antaraṅga) and together constitute Saṃyama — are correctly given in which of the following options?",
+    "options": {
+      "A": "Yama, Niyama, Āsana",
+      "B": "Āsana, Prāṇāyāma, Pratyāhāra",
+      "C": "Dhāraṇā, Dhyāna, Samādhi",
+      "D": "Pratyāhāra, Dhāraṇā, Dhyāna"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 34,
+    "question": "Match the following international environmental agreements with the specific environmental issues they address.\n\n| List-I (International Agreement) | List-II (Environmental Issue) |\n|---|---|\n| A. Ramsar Convention | 1. Desertification |\n| B. UNCCD | 2. Wetland conservation |\n| C. Vienna Convention | 3. Hazardous waste trade |\n| D. Bamako Convention | 4. Ozone layer protection |\n",
+    "options": {
+      "A": "A-2, B-1, C-3, D-4",
+      "B": "A-1, B-2, C-3, D-4",
+      "C": "A-2, B-1, C-4, D-3",
+      "D": "A-4, B-3, C-2, D-1"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 35,
+    "question": "Match List-I (Convention/Protocol) with List-II (Key Feature/Objective). Choose the correct code from the options given below:\n\n| List-I | List-II |\n|---|---|\n| A. Kyoto Protocol | 1. HFCs phase-down (Kigali Amendment) |\n| B. Paris Agreement | 2. POPs elimination |\n| C. Montreal Protocol | 3. NDCs and 1.5°C goal |\n| D. Stockholm Convention | 4. Binding Annex I targets |\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-2, B-1, C-4, D-3",
+      "C": "A-4, B-3, C-1, D-2",
+      "D": "A-3, B-4, C-2, D-1"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 36,
+    "question": "Which of the following are core missions of National Action Plan on Climate Change?\nA. National Solar Mission\nB. National Mission on dessert\nC. National Water Mission\nD. National mission for sustainable agriculture\nE. National Mission on Indian Ocean\nChoose the correct answer from the options given below.",
+    "options": {
+      "A": "A, B and C only",
+      "B": "B, C and D only",
+      "C": "A, C and D only",
+      "D": "C, D and E only"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 37,
+    "question": "Hydrogen fuel cells are categorized as:",
+    "options": {
+      "A": "Non-fuel",
+      "B": "Traditional fuel",
+      "C": "Alternative fuel",
+      "D": "Non-traditional fossil fuel"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 38,
+    "question": "If m and n are real numbers such that m² + n² = 20 and n = m + 2, then the value of m⁴ + n⁴ is:",
+    "options": {
+      "A": "256",
+      "B": "272",
+      "C": "288",
+      "D": "320"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 39,
+    "question": "Match the ancient educational institutions in List I with their primary field of specialization or a defining feature in List II:\n\n| List I (Ancient Institution) | List II (Specialization/Feature) |\n|---|---|\n| A. Nalanda | I. Site where Chanakya is believed to have taught statecraft |\n| B. Takshashila | II. Center for Vajrayana Buddhist philosophy, established by Pala King Dharmapala |\n| C. Vikramashila | III. Famous for the vast library complex, Dharmaganja (Mountain of Truth) |\n| D. Valabhi | IV. Noted center for Hinayana Buddhism and the study of Nyaya |\n",
+    "options": {
+      "A": "A-III, B-IV, C-II, D-I",
+      "B": "A-III, B-I, C-II, D-IV",
+      "C": "A-III, B-I, C-IV, D-II",
+      "D": "A-I, B-III, C-II, D-IV"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 40,
+    "question": "Given below are four statements regarding Levels of Teaching:\nStatement I: Memory level teaching is associated with Herbart and focuses on rote learning and factual recall without emphasis on understanding.\nStatement II: Understanding-level teaching, associated with Morrison, aims at helping learners comprehend relationships and meanings — going beyond mere memorization.\nStatement III: Reflective level teaching is the lowest level of teaching as it requires minimal cognitive effort from both teacher and student.\nStatement IV: All three levels of teaching — Memory, Understanding, and Reflective — are equally appropriate for university-level instruction.\nChoose the most appropriate answer:",
+    "options": {
+      "A": "Statements I and II are correct; III and IV are incorrect",
+      "B": "Statements I, II, and III are correct; IV is incorrect",
+      "C": "All four statements are correct",
+      "D": "Only Statement I is correct; II, III, and IV are incorrect"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 41,
+    "question": "Match List I (Maxim of Teaching) with List II (Correct Direction/Meaning):\n\n| List I (Maxim) | List II (Direction) |\n|---|---|\n| A. From Known to Unknown | I. Begin with physical objects before introducing abstract symbols |\n| B. From Concrete to Abstract | II. Build on existing knowledge to introduce new concepts |\n| C. From Simple to Complex | III. Start with local, familiar examples before global concepts |\n| D. From Local to General | IV. Introduce easy foundational concepts before difficult ones |\n",
+    "options": {
+      "A": "A-I, B-II, C-IV, D-III",
+      "B": "A-II, B-I, C-IV, D-III",
+      "C": "A-III, B-IV, C-I, D-II",
+      "D": "A-II, B-IV, C-I, D-III"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 42,
+    "question": "Identify the correct sequence of stages in qualitative data analysis:\n(A) Data familiarization\n(B) Generating initial codes\n(C) Searching for themes\n(D) Reviewing themes\n(E) Defining and naming themes\n(F) Producing the report\nChoose the correct answer from the options given below:",
+    "options": {
+      "A": "A, C, B, D, E, F",
+      "B": "B, A, C, E, D, F",
+      "C": "A, B, C, D, E, F",
+      "D": "C, B, A, E, D, F"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 43,
+    "question": "Match List I (Sampling Method) with List II (Key Characteristic):\n\n| List I (Sampling) | List II (Characteristic) |\n|---|---|\n| A. Systematic Sampling | I. Participants recruit future participants |\n| B. Cluster Sampling | II. Every nth element selected from an ordered list |\n| C. Snowball Sampling | III. Naturally occurring groups randomly selected as units |\n| D. Purposive Sampling | IV. Researcher deliberately selects information-rich cases |\n",
+    "options": {
+      "A": "A-III, B-II, C-I, D-IV",
+      "B": "A-II, B-III, C-I, D-IV",
+      "C": "A-I, B-IV, C-III, D-II",
+      "D": "A-II, B-I, C-IV, D-III"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 44,
+    "question": "\"Standard Deviation\" is considered the most reliable measure of dispersion because:",
+    "options": {
+      "A": "It is the easiest to calculate manually",
+      "B": "It uses only the highest and lowest scores",
+      "C": "It takes into account every score in the distribution and is based on squared deviations from the mean",
+      "D": "It is not affected by extreme scores in the distribution"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 45,
+    "question": "Match List I (Type of Validity) with List II (Key Characteristic):\n\n| List I – Validity | List II – Focus |\n|---|---|\n| A. Content Validity | I. Accuracy of the causal relationship |\n| B. Criterion Validity | II. Extent to which the measure represents all facets of a construct |\n| C. Internal Validity | III. Correlation with an external standard or outcome |\n| D. External Validity | IV. Generalizability of findings to other settings |\n",
+    "options": {
+      "A": "A–II, B–III, C–I, D–IV",
+      "B": "A–I, B–II, C–III, D–IV",
+      "C": "A–II, B–IV, C–III, D–I",
+      "D": "A–III, B–I, C–IV, D–II"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 46,
+    "question": "Match List I (Research Design) with List II (Key Feature):\n\n| List I (Design) | List II (Feature) |\n|---|---|\n| A. True Experimental | I. No random assignment — uses existing groups |\n| B. Quasi-Experimental | II. In-depth study of single bounded unit |\n| C. Case Study | III. Random assignment + control group + IV manipulation |\n| D. Correlational | IV. Measures relationship between variables without manipulation |\n",
+    "options": {
+      "A": "A-III, B-I, C-II, D-IV",
+      "B": "A-I, B-III, C-IV, D-II",
+      "C": "A-II, B-IV, C-I, D-III",
+      "D": "A-III, B-IV, C-I, D-II"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 47,
+    "question": "Arrange the following according to the \"Square of Opposition\" in descending order of truth-value constraint (from strongest contradiction to sub-alteration):\nI. Contradictories\nII. Contraries\nIII. Sub-contraries\nIV. Sub-alterns",
+    "options": {
+      "A": "I, II, III, IV",
+      "B": "II, I, IV, III",
+      "C": "IV, III, II, I",
+      "D": "I, III, II, IV"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 48,
+    "question": "The \"Red Herring\" fallacy is best described as:",
+    "options": {
+      "A": "Using emotionally charged language to sway an audience.",
+      "B": "Introducing an irrelevant topic to divert attention from the original issue.",
+      "C": "Arguing that a claim is true because it has not been proven false.",
+      "D": "Assuming that what is true of the parts is true of the whole."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 49,
+    "question": "Arrange the components of a standard-form Categorical Proposition in the correct structural sequence:\n1. Predicate Term\n2. Quantifier\n3. Copula\n4. Subject Term",
+    "options": {
+      "A": "2, 4, 1, 3",
+      "B": "2, 3, 4, 1",
+      "C": "4, 2, 3, 1",
+      "D": "2, 4, 3, 1"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 50,
+    "question": "Match the specific situation (List I) with the Pramana (List II) used to acquire that knowledge:\n\n| List I (Situation) | List II (Pramana) |\n|---|---|\n| A. Understanding that there is no teacher in the classroom. | I. Arthapatti (Implication) |\n| B. Knowing that a heavy person is eating at night because they don't eat during the day. | II. Anupalabdhi (Non-perception) |\n| C. Knowing that a wild cow is like a domestic cow. | III. Sabda (Verbal Testimony) |\n| D. Learning about gravity from a physics textbook. | IV. Upamana (Comparison) |\n",
+    "options": {
+      "A": "A-II, B-I, C-IV, D-III",
+      "B": "A-I, B-II, C-III, D-IV",
+      "C": "A-II, B-IV, C-I, D-III",
+      "D": "A-III, B-I, C-IV, D-II"
+    },
+    "answer": "A"
+  }
+]
