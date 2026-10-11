@@ -7,7 +7,8 @@
    2. files.json (optional manual list) if GitHub cannot be asked.
    3. questions.json as a last resort. */
 const GH = { owner: "", repo: "", path: "", branch: "" };   // e.g. { owner: "don", repo: "mcq", path: "", branch: "main" }
-const MANIFEST_URL = "files.json";
+const FOLDER = "qp";   // quiz files live in this folder, next to index.html and app.js
+const MANIFEST_URL = "files.json";   // optional, also inside the qp folder
 const FALLBACK_FILE = "questions.json";
 const SKIP_FILES = ["files.json", "package.json", "package-lock.json", "manifest.json", "tsconfig.json", "composer.json"];
 const LAST_FILE_KEY = "mcq_last_file";
@@ -222,16 +223,17 @@ function jsonp(url) {
 }
 
 /* Work out where this site lives on GitHub: returns a list of {owner, repo, path} guesses */
+const sub = base => [base, FOLDER].filter(Boolean).join("/");   // adds the qp folder to a path
 function ghCandidates() {
-  if (GH.owner && GH.repo) return [{ owner: GH.owner, repo: GH.repo, path: GH.path || "" }];
+  if (GH.owner && GH.repo) return [{ owner: GH.owner, repo: GH.repo, path: sub(GH.path || "") }];
   const host = location.hostname.toLowerCase();
   if (!host.endsWith(".github.io")) return [];
   const owner = host.split(".")[0];
   const seg = location.pathname.split("/").filter(Boolean).map(decodeURIComponent);
   if (seg.length && seg[seg.length - 1].includes(".")) seg.pop();          // drop index.html
   const list = [];
-  if (seg.length) list.push({ owner, repo: seg[0], path: seg.slice(1).join("/") });   // project site
-  list.push({ owner, repo: owner + ".github.io", path: seg.join("/") });              // user site
+  if (seg.length) list.push({ owner, repo: seg[0], path: sub(seg.slice(1).join("/")) });   // project site
+  list.push({ owner, repo: owner + ".github.io", path: sub(seg.join("/")) });              // user site
   return list;
 }
 
@@ -259,7 +261,7 @@ async function listFromGitHub() {
 
 async function listFromManifest() {
   try {
-    const res = await fetch(MANIFEST_URL + "?t=" + Date.now());
+    const res = await fetch(FOLDER + "/" + MANIFEST_URL + "?t=" + Date.now());
     if (!res.ok) return [];
     const data = await res.json();
     return Array.isArray(data) ? data : (data && Array.isArray(data.files) ? data.files : []);
@@ -290,7 +292,7 @@ async function loadBlog() {
   draft = getDraft();   // the admin's unpublished copy belongs to this file only
 
   try {
-    const res = await fetch(encodeURIComponent(currentFile) + "?t=" + Date.now());  // cache-bust
+    const res = await fetch(FOLDER + "/" + encodeURIComponent(currentFile) + "?t=" + Date.now());  // cache-bust
     if (!res.ok) throw new Error("HTTP " + res.status);
 
     const data = await res.json();
@@ -301,7 +303,7 @@ async function loadBlog() {
     blogList = [];
     bankInfo = null;
     loadState = "error";
-    loadError = errText(err) + " — Make sure " + currentFile + " is in the same folder as index.html and is valid JSON.";
+    loadError = errText(err) + " — Make sure " + currentFile + " is inside the " + FOLDER + " folder next to index.html and is valid JSON.";
   }
 
   // Clear draft if it matches the live data
