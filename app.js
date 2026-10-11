@@ -1,6 +1,18 @@
 "use strict";
 
-const JSON_URL = "questions.json";
+/* How the list of quiz files is found (no extra steps for you – just upload .json files to the repo folder):
+   1. GitHub: the page asks GitHub which .json files are in this folder of the repo. The owner / repo are
+      worked out from the site address (https://OWNER.github.io/REPO/). Only fill GH below if you use a
+      custom domain or the auto-detection is wrong.
+   2. files.json (optional manual list) if GitHub cannot be asked.
+   3. questions.json as a last resort. */
+const GH = { owner: "", repo: "", path: "", branch: "" };   // e.g. { owner: "don", repo: "mcq", path: "", branch: "main" }
+const MANIFEST_URL = "files.json";
+const FALLBACK_FILE = "questions.json";
+const SKIP_FILES = ["files.json", "package.json", "package-lock.json", "manifest.json", "tsconfig.json", "composer.json"];
+const LAST_FILE_KEY = "mcq_last_file";
+let availableFiles = [];                  // every quiz file found, e.g. ["oceanography.json", "physics.json"]
+let currentFile = "";                     // the file the person has chosen
 
 /* ───────── Config ───────── */
 const LETTERS = ["A", "B", "C", "D"];
@@ -20,6 +32,7 @@ const CFG = (function () {
   return d;
 })();
 const DRAFT_KEY = "mcq_blogger_draft_v1";
+const draftKey = () => DRAFT_KEY + ":" + currentFile;   // one draft per file
 const SESSION_KEY = "mcq_admin_session";
 const NAV_USER = [["Dashboard", "dashboard"], ["View Questions", "view"], ["Take Quiz", "quiz"]];
 const NAV_ADMIN = [
@@ -182,9 +195,9 @@ function bankProblem() {
 }
 
 /* ───────── Draft storage (admin only) ───────── */
-function getDraft() { try { const s = localStorage.getItem(DRAFT_KEY); return s ? normalize(JSON.parse(s)) : null; } catch (e) { return null; } }
-function setDraft(list) { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(list)); } catch (e) {} }
-function clearDraft() { try { localStorage.removeItem(DRAFT_KEY); } catch (e) {} }
+function getDraft() { try { const s = localStorage.getItem(draftKey()); return s ? normalize(JSON.parse(s)) : null; } catch (e) { return null; } }
+function setDraft(list) { try { localStorage.setItem(draftKey(), JSON.stringify(list)); } catch (e) {} }
+function clearDraft() { try { localStorage.removeItem(draftKey()); } catch (e) {} }
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 function applyWorking() { questions = (isAdmin && draft) ? draft : blogList; }
 
@@ -208,27 +221,87 @@ function jsonp(url) {
   });
 }
 
+/* Work out where this site lives on GitHub: returns a list of {owner, repo, path} guesses */
+function ghCandidates() {
+  if (GH.owner && GH.repo) return [{ owner: GH.owner, repo: GH.repo, path: GH.path || "" }];
+  const host = location.hostname.toLowerCase();
+  if (!host.endsWith(".github.io")) return [];
+  const owner = host.split(".")[0];
+  const seg = location.pathname.split("/").filter(Boolean).map(decodeURIComponent);
+  if (seg.length && seg[seg.length - 1].includes(".")) seg.pop();          // drop index.html
+  const list = [];
+  if (seg.length) list.push({ owner, repo: seg[0], path: seg.slice(1).join("/") });   // project site
+  list.push({ owner, repo: owner + ".github.io", path: seg.join("/") });              // user site
+  return list;
+}
+
+async function listFromGitHub() {
+  for (const c of ghCandidates()) {
+    const cacheKey = "mcq_gh_" + [c.owner, c.repo, c.path, GH.branch].join("/");
+    try {
+      const hit = JSON.parse(sessionStorage.getItem(cacheKey) || "null");
+      if (hit && Date.now() - hit.t < 5 * 60 * 1000) return hit.list;       // keeps GitHub's hourly limit safe
+    } catch (e) {}
+    try {
+      const url = `https://api.github.com/repos/${c.owner}/${c.repo}/contents/${c.path.split("/").map(encodeURIComponent).join("/")}` +
+                  (GH.branch ? `?ref=${encodeURIComponent(GH.branch)}` : "");
+      const res = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+      if (!res.ok) continue;
+      const items = await res.json();
+      if (!Array.isArray(items)) continue;
+      const list = items.filter(i => i.type === "file").map(i => i.name);
+      try { sessionStorage.setItem(cacheKey, JSON.stringify({ t: Date.now(), list })); } catch (e) {}
+      return list;
+    } catch (e) { /* try the next guess */ }
+  }
+  return [];
+}
+
+async function listFromManifest() {
+  try {
+    const res = await fetch(MANIFEST_URL + "?t=" + Date.now());
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : (data && Array.isArray(data.files) ? data.files : []);
+  } catch (e) { return []; }
+}
+
+/* Find every quiz file in the folder */
+async function discoverFiles() {
+  let list = await listFromGitHub();
+  if (!list.some(n => /\.json$/i.test(n))) list = await listFromManifest();
+  list = [...new Set(list.filter(n => typeof n === "string" && /\.json$/i.test(n) &&
+    !SKIP_FILES.includes(n.toLowerCase()) && !/[\/\\]/.test(n)))]
+    .sort((x, y) => x.localeCompare(y, undefined, { numeric: true, sensitivity: "base" }));
+  return list.length ? list : [FALLBACK_FILE];
+}
+
 async function loadBlog() {
   loadState = "loading";
+  blogList = []; draft = null; applyWorking();
   render();   // show loading state
 
+  if (!availableFiles.length) availableFiles = await discoverFiles();
+  if (!availableFiles.includes(currentFile)) {
+    let saved = "";
+    try { saved = localStorage.getItem(LAST_FILE_KEY) || ""; } catch (e) {}
+    currentFile = availableFiles.includes(saved) ? saved : availableFiles[0];
+  }
+  draft = getDraft();   // the admin's unpublished copy belongs to this file only
+
   try {
-    const res = await fetch(JSON_URL + "?t=" + Date.now());  // cache-bust
+    const res = await fetch(encodeURIComponent(currentFile) + "?t=" + Date.now());  // cache-bust
     if (!res.ok) throw new Error("HTTP " + res.status);
 
     const data = await res.json();
-    blogList = normalize(data);          // uses the existing normalize() function
-    bankInfo = {
-      updated: null,
-      count: blogList.length,
-      name: JSON_URL
-    };
+    blogList = normalize(data);
+    bankInfo = { updated: null, count: blogList.length, name: currentFile };
     loadState = blogList.length ? "ready" : "empty";
   } catch (err) {
     blogList = [];
     bankInfo = null;
     loadState = "error";
-    loadError = errText(err) + " — Make sure questions.json is in the same folder as index.html and is valid JSON.";
+    loadError = errText(err) + " — Make sure " + currentFile + " is in the same folder as index.html and is valid JSON.";
   }
 
   // Clear draft if it matches the live data
@@ -241,7 +314,15 @@ async function loadBlog() {
   render();
 }
 
-
+/* Called when the person picks another file in the drop-down */
+function selectFile(name) {
+  if (!availableFiles.includes(name) || name === currentFile) return;
+  if (quiz.active && !quiz.results && !confirm("Switching files will end the quiz in progress. Continue?")) { updateSide(); return; }
+  currentFile = name;
+  try { localStorage.setItem(LAST_FILE_KEY, name); } catch (e) {}
+  quiz = freshQuiz(); pending = null;
+  loadBlog();
+}
 
 /* ───────── Admin login ───────── */
 function login(user, pass) {
@@ -283,10 +364,15 @@ function buildNav() {
 
 function updateSide() {
   let h = isAdmin ? `<span class="role">Admin</span><br>` : "";
+  if (availableFiles.length) {
+    h += `<label class="lbl" for="fileSel" style="font-size:12px">Question file</label>
+      <select id="fileSel" style="width:100%;min-width:0;margin-bottom:10px">${availableFiles.map(f =>
+        `<option value="${esc(f)}"${f === currentFile ? " selected" : ""}>${esc(f)}</option>`).join("")}</select>`;
+  }
   if (loadState === "nodb") {
     h += `Blog data not available here.${bankInfo && bankInfo.name ? `<br>Using <b>${esc(bankInfo.name)}</b>` : ""}<button class="btn secondary" id="localBtn">Open local JSON file</button>`;
   } else if (bankInfo) {
-    h += `Live file: <b>${esc(CFG.title)}</b>${bankInfo.updated ? `<br>Updated ${esc(fmtDate(bankInfo.updated))}` : ""}`;
+    h += `<b>${bankInfo.count}</b> question(s) in this file${bankInfo.updated ? `<br>Updated ${esc(fmtDate(bankInfo.updated))}` : ""}`;
   } else if (loadState === "loading") {
     h += "Loading questions…";
   } else {
@@ -294,6 +380,8 @@ function updateSide() {
   }
   if (isAdmin && draft) h += `<br><b style="color:#fcd34d">Unpublished changes</b>`;
   $("#bankBox").innerHTML = h;
+  const fs = $("#fileSel");
+  if (fs) fs.onchange = () => selectFile(fs.value);
   const lb = $("#localBtn");
   if (lb) lb.onclick = () => $("#localInput").click();
   $("#authBtn").textContent = isAdmin ? "Log out" : "Admin login";
@@ -538,7 +626,7 @@ function downloadJson() {
   const blob = new Blob([JSON.stringify(questions, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "questions.json";
+  a.download = currentFile || FALLBACK_FILE;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -843,7 +931,6 @@ $("#localInput").onchange = async e => {
 $("#authBtn").onclick = () => { if (isAdmin) logout(); else go("login"); };
 
 try { isAdmin = sessionStorage.getItem(SESSION_KEY) === "1"; } catch (e) {}
-draft = getDraft();
 buildNav();
 applyWorking();
 installQuizKeyboard();   // keyboard navigation (see block above)
