@@ -6,8 +6,11 @@
       custom domain or the auto-detection is wrong.
    2. files.json (optional manual list) if GitHub cannot be asked.
    3. questions.json as a last resort. */
-const GH = { owner: "", repo: "", path: "", branch: "" };   // e.g. { owner: "don", repo: "mcq", path: "", branch: "main" }
+const GH = { owner: "silentassassin14", repo: "mcq-practice", path: "", branch: "main" };   // e.g. { owner: "don", repo: "mcq", path: "", branch: "main" }
 const FOLDER = "qp";   // quiz files live in this folder, next to index.html and app.js
+const RAW_BASE = "https://raw.githubusercontent.com/" + GH.owner + "/" + GH.repo + "/" + GH.branch + "/";   // where new files are downloaded from
+const CACHE_PREFIX = "mcq_cache:";    // saved copies of downloaded files (used when offline)
+const LIST_CACHE_KEY = "mcq_filelist_saved";   // saved list of quiz file names (used when offline)
 const MANIFEST_URL = "files.json";   // optional, also inside the qp folder
 const FALLBACK_FILE = "questions.json";
 const SKIP_FILES = ["files.json", "package.json", "package-lock.json", "manifest.json", "tsconfig.json", "composer.json"];
@@ -237,6 +240,33 @@ function ghCandidates() {
   return list;
 }
 
+/* Download a file from GitHub and keep a copy on the phone.
+   Order: 1) GitHub (latest)  2) the copy saved last time  3) the copy bundled inside the app.
+   Returns { data, source } where source is "online", "saved" or "bundled". */
+async function loadJSON(path) {
+  const key = CACHE_PREFIX + path;
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8000);          // give up after 8 seconds
+    const res = await fetch(RAW_BASE + path.split("/").map(encodeURIComponent).join("/") + "?t=" + Date.now(),
+                            { signal: ctrl.signal, cache: "no-store" });
+    clearTimeout(timer);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const text = await res.text();
+    const data = JSON.parse(text);                                // make sure it is valid JSON
+    try { localStorage.setItem(key, text); } catch (e) { /* storage full: still use the fresh data */ }
+    return { data, source: "online" };
+  } catch (err) {
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved) return { data: JSON.parse(saved), source: "saved" };
+    } catch (e) {}
+    const res = await fetch(path.split("/").map(encodeURIComponent).join("/"));   // file bundled in the app
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return { data: await res.json(), source: "bundled" };
+  }
+}
+
 async function listFromGitHub() {
   for (const c of ghCandidates()) {
     const cacheKey = "mcq_gh_" + [c.owner, c.repo, c.path, GH.branch].join("/");
@@ -253,6 +283,7 @@ async function listFromGitHub() {
       if (!Array.isArray(items)) continue;
       const list = items.filter(i => i.type === "file").map(i => i.name);
       try { sessionStorage.setItem(cacheKey, JSON.stringify({ t: Date.now(), list })); } catch (e) {}
+      try { localStorage.setItem(LIST_CACHE_KEY, JSON.stringify(list)); } catch (e) {}   // keep for offline use
       return list;
     } catch (e) { /* try the next guess */ }
   }
@@ -271,7 +302,10 @@ async function listFromManifest() {
 /* Find every quiz file in the folder */
 async function discoverFiles() {
   let list = await listFromGitHub();
-  if (!list.some(n => /\.json$/i.test(n))) list = await listFromManifest();
+  if (!list.some(n => /\.json$/i.test(n))) {          // offline or GitHub unreachable: use the list saved last time
+    try { list = JSON.parse(localStorage.getItem(LIST_CACHE_KEY) || "[]"); } catch (e) { list = []; }
+  }
+  if (!list.some(n => /\.json$/i.test(n))) list = await listFromManifest();   // bundled list (first launch, offline)
   list = [...new Set(list.filter(n => typeof n === "string" && /\.json$/i.test(n) &&
     !SKIP_FILES.includes(n.toLowerCase()) && !/[\/\\]/.test(n)))]
     .sort((x, y) => x.localeCompare(y, undefined, { numeric: true, sensitivity: "base" }));
@@ -292,12 +326,9 @@ async function loadBlog() {
   draft = getDraft();   // the admin's unpublished copy belongs to this file only
 
   try {
-    const res = await fetch(FOLDER + "/" + encodeURIComponent(currentFile) + "?t=" + Date.now());  // cache-bust
-    if (!res.ok) throw new Error("HTTP " + res.status);
-
-    const data = await res.json();
+    const { data, source } = await loadJSON(FOLDER + "/" + currentFile);   // online -> saved copy -> bundled copy
     blogList = normalize(data);
-    bankInfo = { updated: null, count: blogList.length, name: currentFile };
+    bankInfo = { updated: null, count: blogList.length, name: currentFile, source };
     loadState = blogList.length ? "ready" : "empty";
   } catch (err) {
     blogList = [];
