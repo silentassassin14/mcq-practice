@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following data structures operates on a Last-In, First-Out (LIFO) basis?",
+    "options": {
+      "A": "Queue",
+      "B": "Stack",
+      "C": "Array",
+      "D": "Linked List"
+    },
+    "answer": "B"
+  },
+  {
+    "group": "ocean-depths-analysis",
+    "title": "Directions (Q2): Study the data table and answer the following question.",
+    "passage": "A research team recorded the temperature variations at different depths of an ocean zone:\n\n| Depth (meters) | Temperature (°C) |\n|---|---|\n| 100 | 22 |\n| 500 | 12 |\n| 1000 | 4 |\n\nThis gradient helps in understanding thermocline behavior.",
+    "questions": [
+      {
+        "id": 2,
+        "question": "What is the temperature recorded at a depth of 500 meters?",
+        "options": {
+          "A": "22 °C",
+          "B": "4 °C",
+          "C": "12 °C",
+          "D": "15 °C"
+        },
+        "answer": "C"
+      }
+    ]
+  }
+]
