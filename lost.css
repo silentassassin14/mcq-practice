@@ -1,6 +1,6 @@
 :root{
   --bg:#000000; --card:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#ffffff;
-  --accent:#ff0000; --purple:#ff0000; --green:#34d399; --red:#f87171;
+  --accent:#38bdf8; --purple:#a78bfa; --green:#34d399; --red:#f87171;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--text);
