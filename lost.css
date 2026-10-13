@@ -3,7 +3,10 @@
   --accent:#38bdf8; --purple:#a78bfa; --green:#34d399; --red:#f87171;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);
+/* FIX: only <html> paints the black background. If <body> also had one, the fluid canvas was forced on top
+   of the page at 40% opacity instead of sitting behind it at full strength. */
+html{background:var(--bg)}
+html,body{margin:0;color:var(--text);
   font-family:Helvetica,Arial,"Segoe UI",system-ui,sans-serif;font-size:15px;line-height:1.5}
 button,input,select,textarea{font:inherit;color:inherit}
 
