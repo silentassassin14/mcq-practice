@@ -1247,7 +1247,19 @@ function installLiveUI() {
       attribute vec2 aPosition; varying vec2 vUv,vL,vR,vT,vB; uniform vec2 texelSize;
       void main(){ vUv=aPosition*.5+.5; vL=vUv-vec2(texelSize.x,0.); vR=vUv+vec2(texelSize.x,0.);
         vT=vUv+vec2(0.,texelSize.y); vB=vUv-vec2(0.,texelSize.y); gl_Position=vec4(aPosition,0.,1.); }`;
-    const HEAD = `precision mediump float; precision mediump sampler2D; varying vec2 vUv,vL,vR,vT,vB;`;
+    /* FIX: the vertex shader declares "uniform vec2 texelSize" with highp, and the advection fragment shader
+       declares the same uniform. A uniform shared by both stages must have the SAME precision, otherwise the
+       program fails to link (Chrome/ANGLE: "Precisions of uniform 'texelSize' differ between VERTEX and
+       FRAGMENT shaders"). That error was caught by the try/catch below, so the fluid silently turned itself
+       off and the old orbs/particles background was shown instead. Using highp in the fragment shaders
+       (when the GPU supports it) makes both stages match. */
+    const HEAD = `
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float; precision highp sampler2D;
+#else
+precision mediump float; precision mediump sampler2D;
+#endif
+varying vec2 vUv,vL,vR,vT,vB;`;
     const vs = compile(gl.VERTEX_SHADER, VS);
     function program(fsBody, defs) {
       const p = gl.createProgram();
