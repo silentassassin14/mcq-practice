@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Random Seating Arrangement</title>
+<style>
+  :root{--bg:#f5f6fa;--card:#fff;--ink:#1f2430;--muted:#6b7385;--accent:#4f46e5;--line:#dfe2ee}
+  @media (prefers-color-scheme: dark){
+    :root{--bg:#14161c;--card:#1e212b;--ink:#eceef5;--muted:#9aa1b5;--accent:#818cf8;--line:#33374a}
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
+  .wrap{max-width:760px;margin:0 auto}
+  h1{font-size:1.25rem;margin:6px 0 2px;text-align:center}
+  p.sub{margin:0 0 12px;text-align:center;color:var(--muted);font-size:.9rem}
+  .card{background:var(--card);border-radius:14px;padding:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+  .row>button{flex:1 1 140px}
+  button{font:inherit;font-weight:600;border:0;border-radius:12px;padding:14px 16px;min-height:48px;
+    background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation}
+  button.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:12px 14px}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  button:active:not(:disabled){transform:scale(.97)}
+  .list{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+  @media (min-width:560px){.list{grid-template-columns:1fr 1fr}}
+  label.p{display:flex;align-items:center;gap:12px;padding:14px 12px;border:1.5px solid var(--line);
+    border-radius:12px;cursor:pointer;font-size:1rem;min-height:52px;user-select:none}
+  label.p input{width:22px;height:22px;accent-color:var(--accent);flex:none}
+  label.p.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+  #count{text-align:center;color:var(--muted);margin:12px 0 0;font-size:.95rem}
+  #step2{display:none}
+  canvas{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block}
+  .note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:10px;line-height:1.4}
+  /* sticky action bar on phones for the first step */
+  @media (max-width:559px){
+    #step1 .actions{position:sticky;bottom:0;background:var(--card);padding:10px 0 2px;margin-top:8px}
+    #step1 .actions .row{margin:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Random Seating Arrangement</h1>
+
+  <!-- STEP 1 -->
+  <div id="step1">
+    <p class="sub">Step 1: Select who is present today</p>
+    <div class="card">
+      <div class="row" style="margin-top:0">
+        <button class="secondary" id="all">Select all</button>
+        <button class="secondary" id="none">Clear all</button>
+      </div>
+      <div class="list" id="list"></div>
+      <div id="count"></div>
+      <div class="actions">
+        <div class="row"><button id="go">Generate Seating →</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div id="step2">
+    <p class="sub" id="sub2"></p>
+    <div class="card">
+      <canvas id="cv"></canvas>
+      <div class="row">
+        <button id="again">🔀 Shuffle Again</button>
+        <button id="dl">⬇ Download Image</button>
+      </div>
+      <div class="row">
+        <button class="secondary" id="back">← Change Attendance</button>
+      </div>
+      <div class="note" id="note"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const NAMES = [
+  "SHAHIN NILOFER K P","ANJALA SHAFI","Ganga ps","Athul Krishna K S",
+  "Karaluthara Johnson Godwin Antony","DON P MANOJ","AMISH K","Akshay Sathyan",
+  "Sruthimaya.S","Ashok O V","DEVIKA K D","Radhu Ramachandran M V","Diya Nasla"
+];
+// null = no seat at that position
+const LEFT  = [[1,2],[3,4],[5,6]];
+const RIGHT = [[null,2,3],[4,5,6],[7,8,null]];
+
+// Seats are filled in this order, so a smaller group stays together
+const FILL_ORDER = ["L1","L2","L3","L4","R4","R5","R6","L5","L6","R7","R8","R3","R2"];
+
+const $ = id => document.getElementById(id);
+let present = [];
+
+/* ---------- Step 1: attendance ---------- */
+const list = $("list");
+NAMES.forEach(n => {
+  const l = document.createElement("label");
+  l.className = "p on";
+  l.innerHTML = '<input type="checkbox" checked><span></span>';
+  l.querySelector("span").textContent = n;
+  l.querySelector("input").addEventListener("change", e => {
+    l.classList.toggle("on", e.target.checked); updateCount();
+  });
+  list.appendChild(l);
+});
+function setAll(v){
+  list.querySelectorAll("label").forEach(l => {
+    l.querySelector("input").checked = v; l.classList.toggle("on", v);
+  });
+  updateCount();
+}
+function selected(){
+  return [...list.querySelectorAll("label")]
+    .filter(l => l.querySelector("input").checked)
+    .map(l => l.querySelector("span").textContent);
+}
+function updateCount(){
+  const c = selected().length;
+  $("count").textContent = `${c} of ${NAMES.length} present`;
+  $("go").disabled = c === 0;
+}
+$("all").onclick = () => setAll(true);
+$("none").onclick = () => setAll(false);
+updateCount();
+
+$("go").onclick = () => {
+  present = selected();
+  $("step1").style.display = "none";
+  $("step2").style.display = "block";
+  generate();
+  window.scrollTo({top:0});
+};
+$("back").onclick = () => {
+  $("step2").style.display = "none";
+  $("step1").style.display = "block";
+  window.scrollTo({top:0});
+};
+$("again").onclick = generate;
+
+/* ---------- Seating logic ---------- */
+function shuffle(a){
+  a = a.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function generate(){
+  // Randomise who sits where, but always fill seats in FILL_ORDER
+  const people = shuffle(present);
+  const map = {};
+  people.forEach((p,i) => { map[FILL_ORDER[i]] = p; });
+  draw(map);
+  const vacant = FILL_ORDER.length - people.length;
+  $("sub2").textContent = `${people.length} present · ${vacant} seat(s) vacant`;
+  $("note").textContent = vacant === 0
+    ? ""
+    : "Seats are filled in the order L1, L2, L3, L4, R4, R5, R6, L5, L6, R7, R8, R3, R2 so nobody sits isolated.";
+}
+
+/* ---------- Draw to canvas (this is the downloadable image) ---------- */
+const cv = $("cv"), ctx = cv.getContext("2d");
+const W = 580, H = 450, S = 3; // logical size, pixel scale (3x = sharp when downloaded)
+cv.width = W*S; cv.height = H*S;
+
+function wrap(text, maxW){
+  const words = text.split(/\s+/), lines = []; let cur = "";
+  for(const w of words){
+    const t = cur ? cur+" "+w : w;
+    if(ctx.measureText(t).width <= maxW || !cur) cur = t;
+    else { lines.push(cur); cur = w; }
+  }
+  if(cur) lines.push(cur);
+  return lines;
+}
+
+function seat(x, y, w, h, label, name){
+  ctx.beginPath(); ctx.roundRect(x, y, w, h, 10);
+  if(name){
+    ctx.fillStyle = "#eef0ff"; ctx.fill();
+    ctx.strokeStyle = "#8b93f5"; ctx.lineWidth = 2; ctx.setLineDash([]); ctx.stroke();
+  } else {
+    ctx.fillStyle = "#f4f5f8"; ctx.fill();
+    ctx.strokeStyle = "#c9cdd9"; ctx.lineWidth = 2; ctx.setLineDash([5,4]); ctx.stroke(); ctx.setLineDash([]);
+  }
+  ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = "#7a8196"; ctx.font = "600 10px system-ui, sans-serif";
+  ctx.fillText(label, x+w/2, y+14);
+  if(!name){
+    ctx.fillStyle = "#a3a9ba"; ctx.font = "italic 12px system-ui, sans-serif";
+    ctx.fillText("vacant", x+w/2, y+h/2+9);
+    return;
+  }
+  const avail = h - 24;
+  let size = 15, lines;
+  for(; size >= 9; size--){
+    ctx.font = `700 ${size}px system-ui, sans-serif`;
+    lines = wrap(name, w-12);
+    if(lines.length*(size+2) <= avail) break;
+  }
+  ctx.fillStyle = "#1f2430";
+  const lh = size+2, total = lines.length*lh;
+  let ty = y+20 + (avail-total)/2 + size - 2;
+  lines.forEach(l => { ctx.fillText(l, x+w/2, ty); ty += lh; });
+}
+
+function draw(map){
+  ctx.setTransform(S,0,0,S,0,0);
+  ctx.fillStyle = "#ffffff"; ctx.fillRect(0,0,W,H);
+
+  ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = "#1f2430"; ctx.font = "700 22px system-ui, sans-serif";
+  ctx.fillText("Classroom Seating", W/2, 34);
+
+  // board
+  ctx.fillStyle = "#1f2430"; ctx.beginPath(); ctx.roundRect(W/2-150, 48, 300, 26, 7); ctx.fill();
+  ctx.fillStyle = "#fff"; ctx.font = "600 12px system-ui, sans-serif";
+  ctx.fillText("FRONT / BOARD", W/2, 66);
+
+  const sw = 96, sh = 92, g = 8, aisle = 28;
+  const leftW = 2*sw + g, rightW = 3*sw + 2*g;
+  const x0 = (W - (leftW + aisle + rightW)) / 2;
+  const y0 = 92;
+
+  LEFT.forEach((row,r) => row.forEach((n,c) => {
+    const id = "L"+n;
+    seat(x0 + c*(sw+g), y0 + r*(sh+g), sw, sh, id, map[id]);
+  }));
+  const xr = x0 + leftW + aisle;
+  RIGHT.forEach((row,r) => row.forEach((n,c) => {
+    if(n === null) return; // no seat here
+    const id = "R"+n;
+    seat(xr + c*(sw+g), y0 + r*(sh+g), sw, sh, id, map[id]);
+  }));
+
+  const yl = y0 + 3*sh + 2*g + 24;
+  ctx.fillStyle = "#7a8196"; ctx.font = "600 12px system-ui, sans-serif"; ctx.textAlign = "center";
+  ctx.fillText("LEFT SIDE", x0 + leftW/2, yl);
+  ctx.fillText("RIGHT SIDE", xr + rightW/2, yl);
+
+  const d = new Date().toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"});
+  ctx.fillStyle = "#a3a9ba"; ctx.font = "11px system-ui, sans-serif";
+  ctx.fillText(`${d} · ${Object.keys(map).length} present`, W/2, H-12);
+}
+
+/* ---------- Download ---------- */
+$("dl").onclick = () => {
+  const a = document.createElement("a");
+  a.download = "seating-arrangement.png";
+  a.href = cv.toDataURL("image/png");
+  document.body.appendChild(a); a.click(); a.remove();
+};
+</script>
+</body>
+</html>
