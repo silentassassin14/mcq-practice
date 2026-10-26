@@ -1,0 +1,3697 @@
+[
+  {
+    "id": 1,
+    "question": "The Conrad discontinuity lies at roughly what depth below ground level?",
+    "options": {
+      "A": "11 km",
+      "B": "33 km",
+      "C": "2900 km",
+      "D": "5150 km"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 2,
+    "question": "In the layered structure of the Earth, the lithosphere includes the crust and:",
+    "options": {
+      "A": "The whole lower mantle",
+      "B": "The uppermost rigid part of the mantle",
+      "C": "The outer core",
+      "D": "The inner core"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 3,
+    "question": "The Repetti discontinuity lies between:",
+    "options": {
+      "A": "The crust and the upper mantle",
+      "B": "The outer core and the inner core",
+      "C": "The upper mantle and the lower mantle",
+      "D": "The upper and lower crust"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 4,
+    "question": "Which layer lies directly below the lithosphere in the notes' diagram?",
+    "options": {
+      "A": "Mesosphere",
+      "B": "Barysphere",
+      "C": "Sial",
+      "D": "Asthenosphere"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 5,
+    "question": "The mesosphere in the Earth's interior corresponds to the:",
+    "options": {
+      "A": "Lower mantle",
+      "B": "Upper crust",
+      "C": "Outer core",
+      "D": "Inner core"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 6,
+    "question": "The barysphere refers to the:",
+    "options": {
+      "A": "Crust of the Earth",
+      "B": "Core of the Earth",
+      "C": "Upper mantle",
+      "D": "Atmosphere"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 7,
+    "question": "The Gutenberg discontinuity separates the:",
+    "options": {
+      "A": "Crust from the mantle",
+      "B": "Outer core from the inner core",
+      "C": "Lower mantle from the outer core",
+      "D": "Upper crust from the lower crust"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 8,
+    "question": "The Lehmann discontinuity separates the:",
+    "options": {
+      "A": "Crust from the mantle",
+      "B": "Upper mantle from the lower mantle",
+      "C": "Lower mantle from the outer core",
+      "D": "Outer core from the inner core"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 9,
+    "question": "Across the Moho, the P-wave velocity rises from about 7.2 km/s to about:",
+    "options": {
+      "A": "8.1 km/s",
+      "B": "5.0 km/s",
+      "C": "6.5 km/s",
+      "D": "13.0 km/s"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 10,
+    "question": "Which layer is described as the mafic or basaltic layer?",
+    "options": {
+      "A": "Sial",
+      "B": "Sima",
+      "C": "Nife",
+      "D": "Asthenosphere"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 11,
+    "question": "Which layer of the Earth is described as nickel–iron (Nife)?",
+    "options": {
+      "A": "Continental crust",
+      "B": "Oceanic crust",
+      "C": "Core",
+      "D": "Upper mantle"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 12,
+    "question": "The upper mantle is also called the:",
+    "options": {
+      "A": "Sial layer",
+      "B": "Nife layer",
+      "C": "Baryosphere",
+      "D": "Sima layer in the notes' diagram"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 13,
+    "question": "The highest thickness of continental crust, 114 km, is reported from:",
+    "options": {
+      "A": "The United States",
+      "B": "India",
+      "C": "Australia",
+      "D": "Brazil"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 14,
+    "question": "The oldest continental crust is about how many times older than the oldest oceanic crust?",
+    "options": {
+      "A": "About 2 times",
+      "B": "About 20 times",
+      "C": "About 5 times",
+      "D": "About 100 times"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 15,
+    "question": "Which of these is among the eight most abundant elements of the crust?",
+    "options": {
+      "A": "Gold",
+      "B": "Lead",
+      "C": "Magnesium",
+      "D": "Copper"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 16,
+    "question": "Which element in the notes' list of crustal elements is a metal that is also the most abundant crustal metal?",
+    "options": {
+      "A": "Iron",
+      "B": "Sodium",
+      "C": "Calcium",
+      "D": "Aluminium"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 17,
+    "question": "Which two elements are the most abundant in the Earth's crust?",
+    "options": {
+      "A": "Oxygen and silicon",
+      "B": "Iron and magnesium",
+      "C": "Aluminium and iron",
+      "D": "Sodium and potassium"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 18,
+    "question": "Which gas among those listed for the atmosphere is a noble gas?",
+    "options": {
+      "A": "Nitrogen",
+      "B": "Argon",
+      "C": "Oxygen",
+      "D": "Hydrogen"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 19,
+    "question": "In the mnemonic SOC PS, the letter P stands for:",
+    "options": {
+      "A": "Pyroxenes",
+      "B": "Plagioclase",
+      "C": "Phosphates",
+      "D": "Pegmatites"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 20,
+    "question": "Approximately what volume of saline water (oceans) is given for the Earth?",
+    "options": {
+      "A": "37.5 million cubic km",
+      "B": "800 million cubic km",
+      "C": "13.2 million cubic km",
+      "D": "1320 million cubic km"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 21,
+    "question": "The total volume of fresh water on Earth is given as about:",
+    "options": {
+      "A": "37.5 million cubic km",
+      "B": "1320 million cubic km",
+      "C": "375 million cubic km",
+      "D": "3.75 million cubic km"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 22,
+    "question": "Ground water below 800 m depth forms what share of the Earth's fresh water?",
+    "options": {
+      "A": "1%",
+      "B": "11%",
+      "C": "77%",
+      "D": "37%"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 23,
+    "question": "The statement that the hydrologic cycle has no beginning and no end means it is:",
+    "options": {
+      "A": "A one-way process",
+      "B": "A seasonal process only",
+      "C": "A continuous cyclic process",
+      "D": "A process limited to the oceans"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 24,
+    "question": "Which of these is a process of the hydrologic cycle listed in the notes?",
+    "options": {
+      "A": "Metamorphism",
+      "B": "Sedimentation of loess",
+      "C": "Magmatic differentiation",
+      "D": "Guttation"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 25,
+    "question": "Guttation is the:",
+    "options": {
+      "A": "Exudation of water droplets from plant leaves",
+      "B": "Evaporation from open water",
+      "C": "Flow of water between rock formations",
+      "D": "Loss of water by rain interception"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 26,
+    "question": "Interception loss in the hydrologic cycle is the water:",
+    "options": {
+      "A": "Infiltrating into the soil",
+      "B": "Held on vegetation and evaporated before reaching the ground",
+      "C": "Flowing in streams",
+      "D": "Stored in glaciers"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 27,
+    "question": "The Thiessen polygon method is used to find:",
+    "options": {
+      "A": "Rate of infiltration",
+      "B": "Rate of transpiration",
+      "C": "Average rainfall over an area",
+      "D": "Rate of surface run-off"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 28,
+    "question": "Which method of finding average rainfall uses lines of equal rainfall?",
+    "options": {
+      "A": "Thiessen polygon method",
+      "B": "Arithmetic average method",
+      "C": "Lysimeter method",
+      "D": "Isohyetal method"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 29,
+    "question": "The double ring infiltrometer is used to measure:",
+    "options": {
+      "A": "Infiltration",
+      "B": "Evaporation",
+      "C": "Precipitation",
+      "D": "Base flow"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 30,
+    "question": "A potometer or phytometer measures:",
+    "options": {
+      "A": "Percolation",
+      "B": "Transpiration",
+      "C": "Evaporation from pans",
+      "D": "Stream discharge"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 31,
+    "question": "A stream gauge is used to measure:",
+    "options": {
+      "A": "Consumptive use",
+      "B": "Infiltration",
+      "C": "Surface run-off",
+      "D": "Guttation"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 32,
+    "question": "Which of these instruments measures evaporation?",
+    "options": {
+      "A": "Lysimeter",
+      "B": "Rain gauge",
+      "C": "Phytometer",
+      "D": "Atmometer"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 33,
+    "question": "Which of these is NOT an evaporation-measuring device in the notes?",
+    "options": {
+      "A": "Double ring infiltrometer",
+      "B": "Evaporimeter",
+      "C": "Evaporation pan",
+      "D": "Evaporometer"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 34,
+    "question": "Consumptive use of water includes:",
+    "options": {
+      "A": "Only precipitation",
+      "B": "Actual and potential evapotranspiration",
+      "C": "Only surface run-off",
+      "D": "Only base flow"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 35,
+    "question": "The abbreviations AET and PET under consumptive use stand for:",
+    "options": {
+      "A": "Annual and periodic evaporation total",
+      "B": "Average and peak evaporation time",
+      "C": "Actual and potential evapotranspiration",
+      "D": "Atmospheric and plant exchange transfer"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 36,
+    "question": "When ground water supplies water to springs, streams and ponds, the stream is called:",
+    "options": {
+      "A": "Influent or losing stream",
+      "B": "Ephemeral stream",
+      "C": "Braided stream",
+      "D": "Effluent or gaining stream"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 37,
+    "question": "When surface water bodies contribute water to the ground water, the stream condition is called:",
+    "options": {
+      "A": "Influent or losing",
+      "B": "Effluent or gaining",
+      "C": "Perennial",
+      "D": "Consequent"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 38,
+    "question": "Which field is the study of snow and ice?",
+    "options": {
+      "A": "Limnology",
+      "B": "Cryology",
+      "C": "Potamology",
+      "D": "Pedology"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 39,
+    "question": "Potamology deals with:",
+    "options": {
+      "A": "Lakes",
+      "B": "Snow and ice",
+      "C": "Surface streams",
+      "D": "Soils"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 40,
+    "question": "Limnology deals with:",
+    "options": {
+      "A": "Surface streams",
+      "B": "Snow and ice",
+      "C": "Fossils",
+      "D": "Lakes"
+    },
+    "answer": "D"
+  },
+  {
+    "group": "preservation-table",
+    "title": "Directions (Q41-46): Study the table on fossil preservation and answer the questions",
+    "passage": "Types of fossil preservation and examples (from the notes).\n\n| Type of preservation | Example or feature |\n|---|---|\n| Refrigeration | Mammoths of Siberia and Alaska |\n| Oil seeps | Ancient rhinoceroses of Eastern Poland |\n| Amber | Soft parts preserved in fossil resin |\n| Desiccation | Natural mummies, Pleistocene mammoths |\n| Permineralisation | Petrified wood of Thiruvakkarai |\n| Carbonization | Residue of carbon after compression |\n| Replacement | Silicification, pyritisation, dolomitisation |\n\n",
+    "questions": [
+      {
+        "id": 41,
+        "question": "Which type of preservation is shown by the rhinoceroses of Eastern Poland?",
+        "options": {
+          "A": "Oil seeps",
+          "B": "Refrigeration",
+          "C": "Amber",
+          "D": "Desiccation"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 42,
+        "question": "Which process gave natural mummies?",
+        "options": {
+          "A": "Refrigeration",
+          "B": "Desiccation",
+          "C": "Carbonization",
+          "D": "Replacement"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 43,
+        "question": "Which type of preservation is shown by the petrified wood of Thiruvakkarai?",
+        "options": {
+          "A": "Carbonization",
+          "B": "Amber",
+          "C": "Permineralisation",
+          "D": "Refrigeration"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 44,
+        "question": "Which type of preservation leaves a carbon residue?",
+        "options": {
+          "A": "Permineralisation",
+          "B": "Replacement",
+          "C": "Amber",
+          "D": "Carbonization"
+        },
+        "answer": "D"
+      },
+      {
+        "id": 45,
+        "question": "Siberian mammoths were preserved by:",
+        "options": {
+          "A": "Refrigeration",
+          "B": "Desiccation",
+          "C": "Oil seeps",
+          "D": "Replacement"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 46,
+        "question": "Which process involves silicification and pyritisation?",
+        "options": {
+          "A": "Refrigeration",
+          "B": "Replacement",
+          "C": "Desiccation",
+          "D": "Amber"
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "question": "Base flow is also described in the notes as:",
+    "options": {
+      "A": "Surface run-off",
+      "B": "Interception loss",
+      "C": "Ground water run-off",
+      "D": "Atmospheric moisture"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 48,
+    "question": "Pedologists study:",
+    "options": {
+      "A": "Fossils",
+      "B": "Crystals",
+      "C": "Rainfall",
+      "D": "Soil"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 49,
+    "question": "Soil is described as the ultimate product of:",
+    "options": {
+      "A": "Weathering of rocks",
+      "B": "Volcanic eruption",
+      "C": "Glacial melting",
+      "D": "Crystallisation of magma"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 50,
+    "question": "Which soil-forming parameter is linked to slope and landform?",
+    "options": {
+      "A": "Time",
+      "B": "Topography or relief",
+      "C": "Climate",
+      "D": "Parent material"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 51,
+    "question": "Which soil-forming parameter refers to the rock from which the soil is derived?",
+    "options": {
+      "A": "Time",
+      "B": "Topography",
+      "C": "Parent material",
+      "D": "Biological activity"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 52,
+    "question": "Latosols develop under which condition?",
+    "options": {
+      "A": "Cold polar climate",
+      "B": "Permanently arid desert climate",
+      "C": "Permanently frozen conditions",
+      "D": "Tropical and subtropical monsoonal climate with alternate wet and dry seasons"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 53,
+    "question": "The O horizon is described as:",
+    "options": {
+      "A": "Humus or organic layer",
+      "B": "Bedrock",
+      "C": "Subsoil",
+      "D": "Parent material"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 54,
+    "question": "The topsoil corresponds to the:",
+    "options": {
+      "A": "B horizon",
+      "B": "A horizon",
+      "C": "C horizon",
+      "D": "R horizon"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 55,
+    "question": "The subsoil corresponds to the:",
+    "options": {
+      "A": "A horizon",
+      "B": "O horizon",
+      "C": "B horizon",
+      "D": "R horizon"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 56,
+    "question": "The washed-out zone of a soil profile is the:",
+    "options": {
+      "A": "B horizon",
+      "B": "C horizon",
+      "C": "D horizon",
+      "D": "A horizon"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 57,
+    "question": "The washed-in zone of a soil profile is the:",
+    "options": {
+      "A": "B horizon",
+      "B": "A horizon",
+      "C": "O horizon",
+      "D": "R horizon"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 58,
+    "question": "Regur soil is formed from the weathering of:",
+    "options": {
+      "A": "Granite",
+      "B": "Basalt",
+      "C": "Limestone",
+      "D": "Sandstone"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 59,
+    "question": "Regur soil is found in which of these states, according to the notes?",
+    "options": {
+      "A": "Kerala",
+      "B": "Punjab",
+      "C": "Maharashtra",
+      "D": "Assam"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 60,
+    "question": "Which soil is rich in Fe, Al, Ti and Mn in its shallow variable type?",
+    "options": {
+      "A": "Alluvial soil",
+      "B": "Regur",
+      "C": "Red soil",
+      "D": "Lateritic soil"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 61,
+    "question": "Variable shallow soil (VSS) is a type of:",
+    "options": {
+      "A": "Lateritic soil with limited thickness",
+      "B": "Alluvial soil",
+      "C": "Black cotton soil",
+      "D": "Red soil"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 62,
+    "question": "The red colour of red soil is due to:",
+    "options": {
+      "A": "Organic matter",
+      "B": "Haematite pigments",
+      "C": "Calcium carbonate",
+      "D": "Quartz"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 63,
+    "question": "Which of these soils is moderately fertile and deficient in lime?",
+    "options": {
+      "A": "Alluvial soil",
+      "B": "Regur",
+      "C": "Red soil",
+      "D": "Residuum lateritic soil"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 64,
+    "question": "Which name is NOT a synonym of regur?",
+    "options": {
+      "A": "Black cotton soil",
+      "B": "Kali matti",
+      "C": "Chernozem",
+      "D": "Kankar soil"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 65,
+    "question": "Laminae are beds thinner than:",
+    "options": {
+      "A": "1 cm",
+      "B": "10 cm",
+      "C": "1 m",
+      "D": "1 mm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 66,
+    "question": "Stratified beds are horizontal because deposition takes place in:",
+    "options": {
+      "A": "A volcanic vent",
+      "B": "A water medium",
+      "C": "A glacier only",
+      "D": "A fault zone"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 67,
+    "question": "A contact in the notes is a surface that separates rocks of:",
+    "options": {
+      "A": "Different ages only",
+      "B": "Igneous origin only",
+      "C": "Same composition",
+      "D": "Metamorphic origin only"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 68,
+    "question": "An unconformity can lead to total distortion of:",
+    "options": {
+      "A": "Crystal faces",
+      "B": "Fossil shells",
+      "C": "Rock colours",
+      "D": "Strike directions"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 69,
+    "question": "Which is a possible cause of an unconformity?",
+    "options": {
+      "A": "Tectonic causes",
+      "B": "Crystallisation",
+      "C": "Photosynthesis",
+      "D": "Guttation"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 70,
+    "question": "The term diastem was introduced by:",
+    "options": {
+      "A": "William Smith",
+      "B": "Barrel",
+      "C": "Cuvier",
+      "D": "Anderson"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 71,
+    "question": "The sole of a bed is:",
+    "options": {
+      "A": "Always a fault surface",
+      "B": "Always an unconformity",
+      "C": "Part of a bedding plane",
+      "D": "A type of fossil"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 72,
+    "question": "Stress is expressed as:",
+    "options": {
+      "A": "Area per unit force",
+      "B": "Change in length",
+      "C": "Change in volume",
+      "D": "Force per unit area"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 73,
+    "question": "Rheology is the science of:",
+    "options": {
+      "A": "Deformation and flow",
+      "B": "Fossils",
+      "C": "Crystals",
+      "D": "Soils"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 74,
+    "question": "Dilation refers to a change in:",
+    "options": {
+      "A": "Shape",
+      "B": "Volume",
+      "C": "Colour",
+      "D": "Temperature"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 75,
+    "question": "Distortion refers to a change in:",
+    "options": {
+      "A": "Volume only",
+      "B": "Mass only",
+      "C": "Shape or form",
+      "D": "Density only"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 76,
+    "question": "A material that behaves as a rigid body at low stress but flows at high stress is a:",
+    "options": {
+      "A": "Hookean solid",
+      "B": "Newtonian fluid",
+      "C": "Brittle solid",
+      "D": "Bingham plastic"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 77,
+    "question": "Which property can be obtained from a stress-strain curve?",
+    "options": {
+      "A": "Young's modulus",
+      "B": "Half-life",
+      "C": "Interfacial angle",
+      "D": "Axial ratio"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 78,
+    "question": "Unless stated otherwise, a stress-strain curve refers to axial normal stress and strain measured in a:",
+    "options": {
+      "A": "Torsion test",
+      "B": "Tension test",
+      "C": "Shear test",
+      "D": "Hydrostatic test"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 79,
+    "question": "Which is a form of deformation listed in the notes?",
+    "options": {
+      "A": "Etching",
+      "B": "Annealing",
+      "C": "Torsion",
+      "D": "Leaching"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 80,
+    "question": "In geology, tensional stress is treated as:",
+    "options": {
+      "A": "Positive",
+      "B": "Zero",
+      "C": "Imaginary",
+      "D": "Negative"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 81,
+    "question": "In Hooke's law, stress is proportional to strain within the:",
+    "options": {
+      "A": "Elastic limit",
+      "B": "Yield point",
+      "C": "Breaking point",
+      "D": "Plastic range"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 82,
+    "question": "Poisson's ratio has:",
+    "options": {
+      "A": "Units of pascal",
+      "B": "No units",
+      "C": "Units of newton",
+      "D": "Units of metre"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 83,
+    "question": "The lowest value of Poisson's ratio given in the notes is:",
+    "options": {
+      "A": "0",
+      "B": "-0.5",
+      "C": "-1.0",
+      "D": "+0.5"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 84,
+    "question": "The highest value of Poisson's ratio given in the notes is:",
+    "options": {
+      "A": "+1.0",
+      "B": "+0.25",
+      "C": "+2.0",
+      "D": "+0.5"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 85,
+    "question": "Each principal stress is a:",
+    "options": {
+      "A": "Vector with direction and magnitude",
+      "B": "Scalar with magnitude only",
+      "C": "Unitless number",
+      "D": "Fixed constant"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 86,
+    "question": "The principal planes of stress carry:",
+    "options": {
+      "A": "Maximum shear stress",
+      "B": "No shear stress",
+      "C": "Only tensional stress",
+      "D": "Only volume change"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 87,
+    "question": "A normal fault in Anderson's theory forms when the vertical stress axis is:",
+    "options": {
+      "A": "The least principal stress",
+      "B": "The intermediate principal stress",
+      "C": "The greatest principal stress",
+      "D": "Absent"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 88,
+    "question": "A thrust fault in Anderson's theory forms when the vertical axis is:",
+    "options": {
+      "A": "The greatest principal stress",
+      "B": "The intermediate principal stress",
+      "C": "Absent",
+      "D": "The least principal stress"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 89,
+    "question": "A strike-slip fault in Anderson's theory forms when the vertical axis is:",
+    "options": {
+      "A": "The intermediate principal stress",
+      "B": "The greatest principal stress",
+      "C": "The least principal stress",
+      "D": "Absent"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 90,
+    "question": "In Anderson's theory the dip of a normal fault is 60° and the dip of a thrust fault is:",
+    "options": {
+      "A": "45°",
+      "B": "30°",
+      "C": "60°",
+      "D": "90°"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 91,
+    "question": "A strike-slip fault is also called a:",
+    "options": {
+      "A": "Reverse fault",
+      "B": "Normal fault",
+      "C": "Transform fault",
+      "D": "Listric fault"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 92,
+    "question": "The strain ellipsoid has principal axes that are:",
+    "options": {
+      "A": "Parallel to each other",
+      "B": "Always equal in length",
+      "C": "Absent in 3D",
+      "D": "Mutually perpendicular and intersect at the centre"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 93,
+    "question": "Neontology is the study of:",
+    "options": {
+      "A": "Existing life",
+      "B": "Fossils",
+      "C": "Rocks",
+      "D": "Minerals"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 94,
+    "question": "Fossils are mostly preserved in:",
+    "options": {
+      "A": "Igneous rocks",
+      "B": "Sedimentary rocks",
+      "C": "Plutonic rocks",
+      "D": "Gneisses"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 95,
+    "question": "Palynology deals with:",
+    "options": {
+      "A": "Fossil bones",
+      "B": "Fossil footprints",
+      "C": "Fossil spores and pollen",
+      "D": "Fossil shells"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 96,
+    "question": "Fossils of fish, reptiles and man belong to:",
+    "options": {
+      "A": "Invertebrate palaeontology",
+      "B": "Palaeobotany",
+      "C": "Micropalaeontology",
+      "D": "Vertebrate palaeontology"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 97,
+    "question": "Which of these is an invertebrate fossil?",
+    "options": {
+      "A": "Brachiopod",
+      "B": "Fish",
+      "C": "Reptile",
+      "D": "Man"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 98,
+    "question": "Which of these is an invertebrate fossil group?",
+    "options": {
+      "A": "Reptile",
+      "B": "Star fish",
+      "C": "Mammal",
+      "D": "Bird"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 99,
+    "question": "Georges Cuvier is regarded as the father of:",
+    "options": {
+      "A": "Micropalaeontology",
+      "B": "Geochronology",
+      "C": "Palaeontology (invertebrate palaeontology)",
+      "D": "Crystallography"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 100,
+    "question": "Alcide d'Orbigny is known as the father of:",
+    "options": {
+      "A": "Palaeobotany",
+      "B": "Geochronology",
+      "C": "Stratigraphy",
+      "D": "Micropalaeontology"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 101,
+    "question": "Microfossils are forms with dimensions less than:",
+    "options": {
+      "A": "5 mm",
+      "B": "5 cm",
+      "C": "50 mm",
+      "D": "1 m"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 102,
+    "question": "Micropalaeontology is useful in:",
+    "options": {
+      "A": "Making jewellery",
+      "B": "Drilling of water wells",
+      "C": "Dating tree rings only",
+      "D": "Measuring seismic waves"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 103,
+    "question": "Which is NOT listed as an application of micropalaeontology?",
+    "options": {
+      "A": "Regional geological surveys",
+      "B": "Petroleum exploration",
+      "C": "Cooking oil refining",
+      "D": "Engineering project investigations"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 104,
+    "question": "Why is micropalaeontology considered a special branch?",
+    "options": {
+      "A": "It studies only man",
+      "B": "It needs no microscope",
+      "C": "It deals with igneous rocks",
+      "D": "It requires special methods of collection and examination"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 105,
+    "question": "Which of these is a microscopic alga group?",
+    "options": {
+      "A": "Diatomacea",
+      "B": "Radiolaria",
+      "C": "Foraminifera",
+      "D": "Conodonts"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 106,
+    "question": "Which of these is a microscopic animal (Rhizopoda)?",
+    "options": {
+      "A": "Diatomacea",
+      "B": "Foraminifera",
+      "C": "Chitinozoa",
+      "D": "Coccolithacea"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 107,
+    "question": "Oligostegina and Chitinozoa are microfossils of:",
+    "options": {
+      "A": "Bacteria",
+      "B": "Siliceous algae",
+      "C": "Uncertain affinities",
+      "D": "Sponge spicules"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 108,
+    "question": "Sponge spicules are classed as:",
+    "options": {
+      "A": "Bacteria",
+      "B": "Protozoa",
+      "C": "Flagellata",
+      "D": "Microscopic elements of larger animals"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 109,
+    "question": "The mnemonic PER stands for the major requisites:",
+    "options": {
+      "A": "Possession of hard parts, Escape from immediate destruction, Rapid burial",
+      "B": "Pressure, Erosion, Rock",
+      "C": "Plants, Eggs, Remains",
+      "D": "Preservation, Evolution, Rate"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 110,
+    "question": "Which of these is a minor requisite for fossil preservation?",
+    "options": {
+      "A": "Possession of hard parts",
+      "B": "Abundance of organisms",
+      "C": "Rapid burial",
+      "D": "Escape from immediate destruction"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 111,
+    "question": "In the mnemonic MAS, the letter M stands for:",
+    "options": {
+      "A": "Mineralization",
+      "B": "Moulding",
+      "C": "Maturity of organisms",
+      "D": "Mummification"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 112,
+    "question": "In the mnemonic MAS, the letter S stands for:",
+    "options": {
+      "A": "Soil",
+      "B": "Shell",
+      "C": "Sediment",
+      "D": "Size of organisms"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 113,
+    "question": "The mnemonic TOP for factors of fossilisation includes P for:",
+    "options": {
+      "A": "Post-burial chemical action",
+      "B": "Pressure only",
+      "C": "Palaeontology",
+      "D": "Pollen"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 114,
+    "question": "In the mnemonic TOP, the letter O stands for:",
+    "options": {
+      "A": "Oxidation",
+      "B": "Original character of organisms",
+      "C": "Ocean floor",
+      "D": "Organic carbon"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 115,
+    "question": "In the mnemonic TOP, the letter T stands for:",
+    "options": {
+      "A": "Temperature",
+      "B": "Time of burial",
+      "C": "Type of material in which the fossil is enclosed",
+      "D": "Trace of organism"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 116,
+    "question": "Mammoths were preserved without alteration by:",
+    "options": {
+      "A": "Carbonization",
+      "B": "Permineralisation",
+      "C": "Impregnation",
+      "D": "Refrigeration"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 117,
+    "question": "Which of these can be preserved in refrigeration?",
+    "options": {
+      "A": "Eyes, hair, blood and undigested food",
+      "B": "Only shells",
+      "C": "Only bones",
+      "D": "Only footprints"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 118,
+    "question": "Amber is the pre-historic fossil:",
+    "options": {
+      "A": "Bone",
+      "B": "Resin",
+      "C": "Wood ash",
+      "D": "Shell"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 119,
+    "question": "Natural mummies result from:",
+    "options": {
+      "A": "Refrigeration",
+      "B": "Carbonization",
+      "C": "Desiccation",
+      "D": "Leaching"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 120,
+    "question": "Which of these is an example of desiccation preservation?",
+    "options": {
+      "A": "Cenozoic corals",
+      "B": "Petrified wood",
+      "C": "Coprolites",
+      "D": "Pleistocene mammoths"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 121,
+    "question": "The mnemonic ROAD for preservation of unaltered soft parts stands for Refrigeration, Oil seeps, Amber and:",
+    "options": {
+      "A": "Desiccation",
+      "B": "Dolomitisation",
+      "C": "Dehydration",
+      "D": "Drilling"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 122,
+    "question": "The mnemonic CAP for unaltered hard parts stands for Calcitic, Aragonitic and:",
+    "options": {
+      "A": "Pyritic",
+      "B": "Phosphatic",
+      "C": "Petrified",
+      "D": "Plastic"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 123,
+    "question": "Corals, foraminifers and echinoderms preserve their shells as:",
+    "options": {
+      "A": "Calcium phosphate",
+      "B": "Silica",
+      "C": "Calcium carbonate (calcitic)",
+      "D": "Amber"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 124,
+    "question": "Brachiopod and arthropod shells are said in the notes to be made of:",
+    "options": {
+      "A": "Aragonite",
+      "B": "Calcite",
+      "C": "Opal",
+      "D": "Phosphatic material"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 125,
+    "question": "Opaline skeletons secreted by protozoans and sponges have the formula:",
+    "options": {
+      "A": "SiO₂·nH₂O",
+      "B": "CaCO₃",
+      "C": "Ca₃(PO₄)₂",
+      "D": "FeS₂"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 126,
+    "question": "Opaline skeletons are absent in:",
+    "options": {
+      "A": "Geologically younger beds",
+      "B": "Geologically older beds",
+      "C": "Modern seas",
+      "D": "Fresh water"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 127,
+    "question": "Aragonite shells of Mesozoic and Cenozoic age may be recrystallised into:",
+    "options": {
+      "A": "Quartz",
+      "B": "Opal",
+      "C": "Calcite",
+      "D": "Pyrite"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 128,
+    "question": "Embedded fossils are formed by:",
+    "options": {
+      "A": "Leaching",
+      "B": "Carbonization",
+      "C": "Refrigeration",
+      "D": "Impregnation"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 129,
+    "question": "Petrified fossils form by water charged with minerals depositing matter in:",
+    "options": {
+      "A": "Porous hard parts",
+      "B": "Soft muscle only",
+      "C": "Bare rock surfaces only",
+      "D": "Footprints only"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 130,
+    "question": "Which minerals may take part in permineralisation?",
+    "options": {
+      "A": "Only halite",
+      "B": "Calcite, silica or iron compounds",
+      "C": "Only gypsum",
+      "D": "Only amber"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 131,
+    "question": "Petrified woods of Thiruvakkarai belong to the:",
+    "options": {
+      "A": "Gondwana formation",
+      "B": "Deccan Traps",
+      "C": "Cuddalore Sandstone formation",
+      "D": "Vindhyan Supergroup"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 132,
+    "question": "The Cuddalore Sandstone formation is of which age?",
+    "options": {
+      "A": "Jurassic",
+      "B": "Permian",
+      "C": "Cambrian",
+      "D": "Mio-Pliocene"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 133,
+    "question": "Carbonization is brought about by:",
+    "options": {
+      "A": "Compressive forces during mountain building",
+      "B": "Tensional forces only",
+      "C": "Volcanic ash only",
+      "D": "Cosmic rays"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 134,
+    "question": "Which of these is an example of replacement?",
+    "options": {
+      "A": "Refrigeration",
+      "B": "Pyritisation",
+      "C": "Desiccation",
+      "D": "Guttation"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 135,
+    "question": "Which of these is a replacement process, as opposed to recrystallisation?",
+    "options": {
+      "A": "Carbonization",
+      "B": "Mummification",
+      "C": "Dolomitisation",
+      "D": "Recrystallisation"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 136,
+    "question": "The mnemonic DRIL PC for altered hard parts includes Dehydration, Recrystallisation, Impregnation, Leaching, Permineralisation and:",
+    "options": {
+      "A": "Calcification",
+      "B": "Casting",
+      "C": "Coprolite",
+      "D": "Carbonization"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 137,
+    "question": "Internal moulds are also called:",
+    "options": {
+      "A": "Steinkerns",
+      "B": "Coprolites",
+      "C": "Gastroliths",
+      "D": "Trackways"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 138,
+    "question": "Internal moulds form when:",
+    "options": {
+      "A": "The shell is pressed into mud and kept",
+      "B": "Sediments fill the shell and the shell is later leached away",
+      "C": "Footprints harden",
+      "D": "Resin covers an insect"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 139,
+    "question": "External moulds form when:",
+    "options": {
+      "A": "Sediments fill the shell cavity",
+      "B": "Faecal pellets harden",
+      "C": "Organisms are pressed into sediments or organic material leaches away",
+      "D": "Burrows are filled"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 140,
+    "question": "Footprints of mammals preserved at Carson City are from:",
+    "options": {
+      "A": "Alaska",
+      "B": "Utah",
+      "C": "Siberia",
+      "D": "Nevada"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 141,
+    "question": "Burrows are tubes made by animals for:",
+    "options": {
+      "A": "Food or shelter",
+      "B": "Fossilisation only",
+      "C": "Making amber",
+      "D": "Dating rocks"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 142,
+    "question": "Rodents gnaw on fresh bones because they are deficient in:",
+    "options": {
+      "A": "Iron",
+      "B": "Calcium",
+      "C": "Carbon",
+      "D": "Silica"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 143,
+    "question": "Coprolites are composed mainly of:",
+    "options": {
+      "A": "Quartz",
+      "B": "Halite",
+      "C": "Phosphate",
+      "D": "Gypsum"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 144,
+    "question": "Guano deposits along the Peruvian coast are an example of:",
+    "options": {
+      "A": "Gastroliths",
+      "B": "Casts",
+      "C": "Trails",
+      "D": "Coprolites"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 145,
+    "question": "Coprolites give clues to the shape of the organism's:",
+    "options": {
+      "A": "Anal region",
+      "B": "Teeth",
+      "C": "Wings",
+      "D": "Eyes"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 146,
+    "question": "Gastroliths were used by extinct reptiles, birds and fishes for:",
+    "options": {
+      "A": "Digging burrows",
+      "B": "Grinding stomach contents",
+      "C": "Making nests",
+      "D": "Walking"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 147,
+    "question": "Palaeobioturbation structures are:",
+    "options": {
+      "A": "Moulds of shells",
+      "B": "Fossil spores",
+      "C": "Modifications of sediments by past organisms",
+      "D": "Fossil resin"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 148,
+    "question": "Study of trace fossils is called:",
+    "options": {
+      "A": "Palynology",
+      "B": "Palaeobotany",
+      "C": "Neontology",
+      "D": "Palaeoichnology"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 149,
+    "question": "William Smith used which type of formations as his type area for correlation?",
+    "options": {
+      "A": "Jurassic formations of southern England",
+      "B": "Cambrian formations of Wales",
+      "C": "Tertiary formations of Paris",
+      "D": "Permian formations of Germany"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 150,
+    "question": "The law of superposition helps fossils give:",
+    "options": {
+      "A": "The colour of rocks",
+      "B": "The age of other units once a fossil is recorded in one",
+      "C": "Mineral hardness",
+      "D": "Crystal symmetry"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 151,
+    "question": "Corals, echinoderms and brachiopods in sediments indicate:",
+    "options": {
+      "A": "Desert environment",
+      "B": "Glacial environment",
+      "C": "Marine palaeo-environment",
+      "D": "Volcanic environment"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 152,
+    "question": "Gondwana plant fossils help to interpret:",
+    "options": {
+      "A": "Crystal systems",
+      "B": "Soil horizons",
+      "C": "Radioactive decay",
+      "D": "Palaeo-geography"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 153,
+    "question": "Archaeopteryx was found in the:",
+    "options": {
+      "A": "Solnhofen Limestone of Germany",
+      "B": "Deccan Traps of India",
+      "C": "Cuddalore Sandstone",
+      "D": "Siwalik Group"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 154,
+    "question": "Archaeopteryx belongs to which age?",
+    "options": {
+      "A": "Cambrian",
+      "B": "Upper Jurassic",
+      "C": "Permian",
+      "D": "Pliocene"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 155,
+    "question": "Which feature of Archaeopteryx is reptile-like?",
+    "options": {
+      "A": "Feathers only",
+      "B": "Wings only",
+      "C": "Teeth",
+      "D": "Beak only"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 156,
+    "question": "Zone fossils, such as brachiopods, have:",
+    "options": {
+      "A": "Short range and wide distribution",
+      "B": "Short range and limited distribution",
+      "C": "No stratigraphic use",
+      "D": "Wide stratigraphic range and limited geographical distribution"
+    },
+    "answer": "D"
+  },
+  {
+    "group": "crystal-systems",
+    "title": "Directions (Q157-162): Study the table of crystal systems and answer the questions",
+    "passage": "Axes and angles of the crystal systems (as given in the notes).\n\n| System | Axes | Angles between axes |\n|---|---|---|\n| Isometric | a = a = a | All 90° |\n| Tetragonal | a = a ≠ c | All 90° |\n| Hexagonal | a = a = a ≠ c | a axes at 60°; c at 90° to the a axes |\n| Orthorhombic | a ≠ b ≠ c | All 90° |\n| Monoclinic | a ≠ b ≠ c | c and a > 90°; others 90° |\n| Triclinic | a ≠ b ≠ c | None 90° |\n\n",
+    "questions": [
+      {
+        "id": 157,
+        "question": "Which system has four axes?",
+        "options": {
+          "A": "Hexagonal",
+          "B": "Isometric",
+          "C": "Tetragonal",
+          "D": "Triclinic"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 158,
+        "question": "Which system has three equal axes all at 90°?",
+        "options": {
+          "A": "Tetragonal",
+          "B": "Isometric",
+          "C": "Hexagonal",
+          "D": "Orthorhombic"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 159,
+        "question": "Which system has two equal axes and a third unequal axis, all at 90°?",
+        "options": {
+          "A": "Isometric",
+          "B": "Orthorhombic",
+          "C": "Tetragonal",
+          "D": "Monoclinic"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 160,
+        "question": "Which system has three unequal axes with none at 90°?",
+        "options": {
+          "A": "Monoclinic",
+          "B": "Orthorhombic",
+          "C": "Tetragonal",
+          "D": "Triclinic"
+        },
+        "answer": "D"
+      },
+      {
+        "id": 161,
+        "question": "Which system has three unequal axes with one angle greater than 90°?",
+        "options": {
+          "A": "Monoclinic",
+          "B": "Triclinic",
+          "C": "Orthorhombic",
+          "D": "Isometric"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 162,
+        "question": "Which system has three unequal axes all at 90°?",
+        "options": {
+          "A": "Monoclinic",
+          "B": "Orthorhombic",
+          "C": "Triclinic",
+          "D": "Tetragonal"
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "question": "Index fossils are also called:",
+    "options": {
+      "A": "Trace fossils",
+      "B": "Microfossils",
+      "C": "Guide fossils or marker fossils",
+      "D": "Living fossils"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 164,
+    "question": "Vertebrate fossils of which period are index fossils in the notes?",
+    "options": {
+      "A": "Cambrian",
+      "B": "Silurian",
+      "C": "Triassic",
+      "D": "Tertiary"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 165,
+    "question": "Trilobites serve as index fossils for the Cambrian and:",
+    "options": {
+      "A": "Ordovician",
+      "B": "Silurian",
+      "C": "Jurassic",
+      "D": "Permian"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 166,
+    "question": "Graptolites serve as index fossils for the Ordovician and:",
+    "options": {
+      "A": "Cambrian",
+      "B": "Silurian",
+      "C": "Devonian",
+      "D": "Cretaceous"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 167,
+    "question": "Ammonoidea serve as index fossils from the Devonian to:",
+    "options": {
+      "A": "Silurian",
+      "B": "Permian",
+      "C": "Cretaceous",
+      "D": "Tertiary"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 168,
+    "question": "Geochronology deals with determining the:",
+    "options": {
+      "A": "Colour of minerals",
+      "B": "Hardness of rocks",
+      "C": "Density of soils",
+      "D": "Age of rocks and fossils"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 169,
+    "question": "Dendrochronology dates:",
+    "options": {
+      "A": "Tree rings",
+      "B": "Zircon crystals",
+      "C": "Fossil bones",
+      "D": "Sediment layers"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 170,
+    "question": "Radiometric dating needs an isotope of known:",
+    "options": {
+      "A": "Hardness",
+      "B": "Half-life",
+      "C": "Colour",
+      "D": "Density"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 171,
+    "question": "Radiometric methods can date archaeological materials such as:",
+    "options": {
+      "A": "Living plants only",
+      "B": "Rain water",
+      "C": "Ancient artifacts",
+      "D": "Air"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 172,
+    "question": "Radioactive decay needs:",
+    "options": {
+      "A": "High pressure",
+      "B": "High temperature",
+      "C": "Strong acid",
+      "D": "No external physico-chemical conditions"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 173,
+    "question": "In T½ = 0.693/λ, λ is the:",
+    "options": {
+      "A": "Decay constant",
+      "B": "Half-life",
+      "C": "Daughter concentration",
+      "D": "Age"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 174,
+    "question": "Which type of decay is Rb⁸⁷ → Sr⁸⁷?",
+    "options": {
+      "A": "Branching decay",
+      "B": "Simple decay",
+      "C": "Chain decay",
+      "D": "Fission decay"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 175,
+    "question": "Which type of decay is U → Pb involving many unstable isotopes?",
+    "options": {
+      "A": "Simple decay",
+      "B": "Branching decay",
+      "C": "Chain decay",
+      "D": "Beta capture only"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 176,
+    "question": "Up to how many unstable isotopes may be involved in uranium-to-lead chain decay?",
+    "options": {
+      "A": "About 4",
+      "B": "About 400",
+      "C": "None",
+      "D": "About 40"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 177,
+    "question": "Uranium–lead dating can use:",
+    "options": {
+      "A": "Uranium-235 or uranium-238",
+      "B": "Potassium-40",
+      "C": "Rubidium-87",
+      "D": "Carbon-14"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 178,
+    "question": "Which of these is a mineral used in U–Pb dating?",
+    "options": {
+      "A": "Glauconite",
+      "B": "Monazite",
+      "C": "Biotite",
+      "D": "Hornblende"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 179,
+    "question": "Which mineral can be dated by U–Pb method as listed in the notes?",
+    "options": {
+      "A": "Feldspar",
+      "B": "Mica",
+      "C": "Sphene",
+      "D": "Quartz"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 180,
+    "question": "The U–Pb method is most suitable for which rocks?",
+    "options": {
+      "A": "Basic sedimentary rocks",
+      "B": "Fresh soils",
+      "C": "Recent coral",
+      "D": "Acid igneous rocks"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 181,
+    "question": "Potassium-40 is common in:",
+    "options": {
+      "A": "Micas, feldspars and hornblende",
+      "B": "Zircon, apatite only",
+      "C": "Quartz only",
+      "D": "Calcite only"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 182,
+    "question": "Argon is useful for dating because it is:",
+    "options": {
+      "A": "A heavy metal",
+      "B": "An inert gas",
+      "C": "A radioactive gas",
+      "D": "A liquid"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 183,
+    "question": "Argon loss in the K–Ar method may occur during:",
+    "options": {
+      "A": "Photosynthesis",
+      "B": "Etching",
+      "C": "Hammering and grinding of samples",
+      "D": "Refrigeration"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 184,
+    "question": "Argon loss may also occur by:",
+    "options": {
+      "A": "Cooling in oceans",
+      "B": "Growth of tree rings",
+      "C": "Weathering of fossils",
+      "D": "Partial melting by high temperature solutions"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 185,
+    "question": "The K–Ar method can date the time of emplacement of:",
+    "options": {
+      "A": "Igneous bodies and plutons",
+      "B": "Footprints",
+      "C": "Fossil wood",
+      "D": "Sedimentary beds only"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 186,
+    "question": "Blocking temperature is the temperature below which there is:",
+    "options": {
+      "A": "Total argon loss",
+      "B": "Total argon retention",
+      "C": "Fission track fading",
+      "D": "Carbon fixation"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 187,
+    "question": "The half-life of the Rb–Sr system is about:",
+    "options": {
+      "A": "5730 years",
+      "B": "1.3 × 10⁹ years",
+      "C": "5 × 10¹⁰ years",
+      "D": "10 600 years"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 188,
+    "question": "Rb–Sr dating is used for young intrusives and the:",
+    "options": {
+      "A": "Age of living trees",
+      "B": "Age of footprints",
+      "C": "Age of coprolites",
+      "D": "Cooling time of basalt"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 189,
+    "question": "The Sm–Nd system has a half-life stated to be longer than:",
+    "options": {
+      "A": "Twice the age of the Earth",
+      "B": "Half the age of the Earth",
+      "C": "The age of the Moon",
+      "D": "5730 years"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 190,
+    "question": "The Sm–Nd method is used for Archaeozoic, Proterozoic and which other rocks?",
+    "options": {
+      "A": "Tertiary soils",
+      "B": "Lunar rocks",
+      "C": "Recent sediments",
+      "D": "Living bone"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 191,
+    "question": "Which minerals suit Sm–Nd dating?",
+    "options": {
+      "A": "Quartz and halite",
+      "B": "Calcite and gypsum",
+      "C": "Pyroxene and garnet",
+      "D": "Kaolinite and talc"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 192,
+    "question": "In radiocarbon dating, carbon-14 is formed from:",
+    "options": {
+      "A": "Oxygen by heat",
+      "B": "Carbon-12 by cooling",
+      "C": "Uranium by decay",
+      "D": "Nitrogen by cosmic rays"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 193,
+    "question": "Carbon-14 decays back to:",
+    "options": {
+      "A": "Nitrogen by beta emission",
+      "B": "Oxygen",
+      "C": "Carbon-12 only",
+      "D": "Argon"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 194,
+    "question": "In the carbon cycle used in dating, C¹⁴ is oxidised to:",
+    "options": {
+      "A": "CH₄",
+      "B": "CO₂",
+      "C": "H₂O",
+      "D": "SO₂"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 195,
+    "question": "The upper age limit of radiocarbon dating is about:",
+    "options": {
+      "A": "5 000 years",
+      "B": "5 million years",
+      "C": "50 000 years",
+      "D": "4.5 billion years"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 196,
+    "question": "Radiocarbon dating can be used for objects containing:",
+    "options": {
+      "A": "Only igneous minerals",
+      "B": "Only metal",
+      "C": "Only salt",
+      "D": "Organic material"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 197,
+    "question": "Fission track dating is considered a method that is:",
+    "options": {
+      "A": "Very inexpensive",
+      "B": "Very expensive",
+      "C": "Only usable for fossils",
+      "D": "Only for dendrochronology"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 198,
+    "question": "Fission track dating is suited to:",
+    "options": {
+      "A": "Exact dating to the year",
+      "B": "Reconnaissance dating",
+      "C": "Dating tree rings",
+      "D": "Dating living organisms"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 199,
+    "question": "Fission tracks are:",
+    "options": {
+      "A": "Sound waves",
+      "B": "Magnetic fields",
+      "C": "Three-dimensional damage trails",
+      "D": "Chemical solutions"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 200,
+    "question": "Fission tracks can be viewed under:",
+    "options": {
+      "A": "A hand lens only",
+      "B": "A rain gauge",
+      "C": "A goniometer",
+      "D": "An electron microscope"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 201,
+    "question": "Which acid is among the etching agents for fission tracks?",
+    "options": {
+      "A": "HF",
+      "B": "H₂SO₄ only",
+      "C": "Acetic acid",
+      "D": "Citric acid"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 202,
+    "question": "Which base is an etching agent for fission tracks?",
+    "options": {
+      "A": "Ca(OH)₂ only",
+      "B": "NaOH",
+      "C": "KOH only",
+      "D": "Ammonia only"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 203,
+    "question": "The etching period for fission tracks is about 20 seconds to:",
+    "options": {
+      "A": "30 days",
+      "B": "30 hours",
+      "C": "30 minutes",
+      "D": "30 years"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 204,
+    "question": "Fission tracks are retained up to about:",
+    "options": {
+      "A": "40 °C",
+      "B": "4000 °C",
+      "C": "4 °C",
+      "D": "400 °C"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 205,
+    "question": "Above the annealing temperature, fission tracks:",
+    "options": {
+      "A": "Disappear",
+      "B": "Increase",
+      "C": "Become blue",
+      "D": "Turn magnetic"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 206,
+    "question": "A higher track density indicates a:",
+    "options": {
+      "A": "Younger age",
+      "B": "Rougher older age",
+      "C": "No age",
+      "D": "Constant age"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 207,
+    "question": "A crystalline substance has:",
+    "options": {
+      "A": "Always natural planar faces",
+      "B": "Random atomic arrangement",
+      "C": "A regular internal arrangement of atoms or ions",
+      "D": "No atoms"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 208,
+    "question": "Crystal faces are external expressions of:",
+    "options": {
+      "A": "Random cooling",
+      "B": "Impurities",
+      "C": "Erosion",
+      "D": "Regular internal arrangement of atoms or ions"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 209,
+    "question": "Euler's theorem is written as:",
+    "options": {
+      "A": "F + V = E + 2",
+      "B": "F + E = V + 2",
+      "C": "F - V = E + 2",
+      "D": "F + V + E = 2"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 210,
+    "question": "A cube has 6 faces and 8 vertices. By Euler's theorem the number of edges is:",
+    "options": {
+      "A": "10",
+      "B": "12",
+      "C": "14",
+      "D": "16"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 211,
+    "question": "If a crystal is bounded by similar faces the faces are called:",
+    "options": {
+      "A": "Unlike faces",
+      "B": "Axial faces",
+      "C": "Like faces",
+      "D": "Zone faces"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 212,
+    "question": "A solid angle is the same as a:",
+    "options": {
+      "A": "Edge",
+      "B": "Face",
+      "C": "Zone",
+      "D": "Vertex"
+    },
+    "answer": "D"
+  },
+  {
+    "group": "geochron-methods",
+    "title": "Directions (Q213-218): Study the dating methods table and answer the questions",
+    "passage": "Radiometric dating methods (from the notes).\n\n| Method | Parent to daughter | Half-life or limit |\n|---|---|---|\n| Rb–Sr | Rb⁸⁷ → Sr⁸⁷ | 5 × 10¹⁰ years |\n| K–Ar | K⁴⁰ → Ar⁴⁰ | 1.3 billion years |\n| Sm–Nd | Sm → Nd | 10 600 years (as stated) |\n| Radiocarbon | N → C¹⁴ → N | 5730 years; up to 50 000 years |\n| Fission track | Spontaneous fission of U²³⁸ | Tracks retained up to 400 °C |\n\n",
+    "questions": [
+      {
+        "id": 213,
+        "question": "Which method has the half-life of 5730 years?",
+        "options": {
+          "A": "Radiocarbon",
+          "B": "Rb–Sr",
+          "C": "K–Ar",
+          "D": "Fission track"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 214,
+        "question": "Which method has a half-life of 1.3 billion years?",
+        "options": {
+          "A": "Rb–Sr",
+          "B": "K–Ar",
+          "C": "Radiocarbon",
+          "D": "Sm–Nd"
+        },
+        "answer": "B"
+      },
+      {
+        "id": 215,
+        "question": "Which method uses the spontaneous fission of U²³⁸?",
+        "options": {
+          "A": "Radiocarbon",
+          "B": "K–Ar",
+          "C": "Fission track",
+          "D": "Rb–Sr"
+        },
+        "answer": "C"
+      },
+      {
+        "id": 216,
+        "question": "Which method has the longest half-life in the table?",
+        "options": {
+          "A": "K–Ar",
+          "B": "Radiocarbon",
+          "C": "Sm–Nd",
+          "D": "Rb–Sr"
+        },
+        "answer": "D"
+      },
+      {
+        "id": 217,
+        "question": "Up to what age can radiocarbon dating be applied?",
+        "options": {
+          "A": "50 000 years",
+          "B": "5 000 years",
+          "C": "1.3 billion years",
+          "D": "400 °C"
+        },
+        "answer": "A"
+      },
+      {
+        "id": 218,
+        "question": "Which method is based on Rb⁸⁷ → Sr⁸⁷?",
+        "options": {
+          "A": "K–Ar",
+          "B": "Rb–Sr",
+          "C": "Sm–Nd",
+          "D": "Radiocarbon"
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "question": "The law of constancy of interfacial angle was valid for crystals formed:",
+    "options": {
+      "A": "Only in nature",
+      "B": "Only in the laboratory",
+      "C": "In nature or in the laboratory",
+      "D": "Only at high pressure"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 220,
+    "question": "The interfacial angle is measured between:",
+    "options": {
+      "A": "Two edges",
+      "B": "Two axes",
+      "C": "Two zones",
+      "D": "The normals of two adjacent like faces"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 221,
+    "question": "Contact goniometers are accurate to about:",
+    "options": {
+      "A": "A quarter of a degree",
+      "B": "One thousandth of a degree",
+      "C": "Ten degrees",
+      "D": "Five degrees"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 222,
+    "question": "A contact goniometer is suited for:",
+    "options": {
+      "A": "Very small crystals",
+      "B": "Large crystals with poorly polished faces",
+      "C": "Microfossils",
+      "D": "Liquid samples"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 223,
+    "question": "Reflecting goniometers are used for:",
+    "options": {
+      "A": "Large crystals with rough faces",
+      "B": "Rocks",
+      "C": "Small crystals",
+      "D": "Fossils"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 224,
+    "question": "The Penfield contact goniometer comes in:",
+    "options": {
+      "A": "Horizontal and theodolite types",
+      "B": "Models X and Y",
+      "C": "Only a single model",
+      "D": "Models A and B"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 225,
+    "question": "Horizontal goniometer and theodolite goniometer are types of:",
+    "options": {
+      "A": "Reflecting goniometer",
+      "B": "Contact goniometer",
+      "C": "Hand goniometer",
+      "D": "Magnetic goniometer"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 226,
+    "question": "A plane of symmetry divides a crystal into:",
+    "options": {
+      "A": "Two unequal parts",
+      "B": "Two mirror-image halves",
+      "C": "Four rotated parts",
+      "D": "No parts"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 227,
+    "question": "A crystal with 120° rotation reproducing similar faces has what type of axis?",
+    "options": {
+      "A": "Two-fold",
+      "B": "Four-fold",
+      "C": "Three-fold (trigonal)",
+      "D": "Six-fold"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 228,
+    "question": "Binary symmetry is also called:",
+    "options": {
+      "A": "Hexagonal symmetry",
+      "B": "Tetragonal symmetry",
+      "C": "Trigonal symmetry",
+      "D": "Diagonal or two-fold symmetry"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 229,
+    "question": "Rotation of 60° to reproduce similar faces indicates which axis?",
+    "options": {
+      "A": "Six-fold (hexagonal)",
+      "B": "Three-fold",
+      "C": "Four-fold",
+      "D": "Two-fold"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 230,
+    "question": "Rotation of 90° to reproduce similar faces indicates which axis?",
+    "options": {
+      "A": "Six-fold",
+      "B": "Four-fold (tetragonal)",
+      "C": "Three-fold",
+      "D": "Two-fold"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 231,
+    "question": "The crystallographic axes are:",
+    "options": {
+      "A": "Real iron rods",
+      "B": "Only edges",
+      "C": "Imaginary lines",
+      "D": "Only faces"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 232,
+    "question": "In the tetragonal system, the lettering of axes is:",
+    "options": {
+      "A": "a, b, c",
+      "B": "a, a, a",
+      "C": "a, a, a, c",
+      "D": "a, a, c"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 233,
+    "question": "In the isometric system, the lettering of axes is:",
+    "options": {
+      "A": "a, a, a",
+      "B": "a, b, c",
+      "C": "a, a, c",
+      "D": "a, a, a, c"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 234,
+    "question": "In the orthorhombic system, the lettering of axes is:",
+    "options": {
+      "A": "a, a, c",
+      "B": "a, b, c",
+      "C": "a, a, a",
+      "D": "a, a, a, c"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 235,
+    "question": "The axial ratio of sulphur is expressed with which axis as unity?",
+    "options": {
+      "A": "a",
+      "B": "c",
+      "C": "b",
+      "D": "None"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 236,
+    "question": "The axial ratio of rutile is a : c =",
+    "options": {
+      "A": "0.8131 : 1",
+      "B": "1 : 1.9034",
+      "C": "1 : 1",
+      "D": "1 : 0.64415"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 237,
+    "question": "Sulphur crystallises in which system as per the notes?",
+    "options": {
+      "A": "Orthorhombic",
+      "B": "Tetragonal",
+      "C": "Isometric",
+      "D": "Hexagonal"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 238,
+    "question": "Rutile crystallises in which system as per the notes?",
+    "options": {
+      "A": "Orthorhombic",
+      "B": "Tetragonal",
+      "C": "Monoclinic",
+      "D": "Triclinic"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 239,
+    "question": "The space included by three axial planes is called an:",
+    "options": {
+      "A": "Sextant",
+      "B": "Zone",
+      "C": "Octant",
+      "D": "Edge"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 240,
+    "question": "The space around the centre of a hexagonal crystal is divided into:",
+    "options": {
+      "A": "Eight octants",
+      "B": "Six octants",
+      "C": "Four quadrants",
+      "D": "Twelve sextants"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 241,
+    "question": "In the hexagonal system the angles between the three a axes are:",
+    "options": {
+      "A": "60°",
+      "B": "90°",
+      "C": "120° only with c",
+      "D": "45°"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 242,
+    "question": "In the monoclinic system, the angle between the c and a axes is:",
+    "options": {
+      "A": "Exactly 90°",
+      "B": "Greater than 90°",
+      "C": "Less than 90°",
+      "D": "Exactly 60°"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 243,
+    "question": "In the triclinic system:",
+    "options": {
+      "A": "All axes are equal",
+      "B": "Two axes are equal",
+      "C": "All three axes are unequal and none is at 90°",
+      "D": "All angles are 90°"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 244,
+    "question": "In the orthorhombic system:",
+    "options": {
+      "A": "Three equal axes meet at 90°",
+      "B": "Two equal axes meet at 90°",
+      "C": "Axes meet at 60°",
+      "D": "Three unequal axes meet at 90°"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 245,
+    "question": "In the tetragonal system:",
+    "options": {
+      "A": "Two axes are equal and all angles are 90°",
+      "B": "All three axes are equal",
+      "C": "Three axes are unequal",
+      "D": "Four axes are present"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 246,
+    "question": "In the isometric system:",
+    "options": {
+      "A": "Two axes are equal",
+      "B": "Three equal axes meet at 90°",
+      "C": "Axes are inclined",
+      "D": "Four axes are present"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 247,
+    "question": "Enantiomorphous forms are compared to:",
+    "options": {
+      "A": "Two identical bricks",
+      "B": "Twin crystals",
+      "C": "Right- and left-handed gloves",
+      "D": "Cubes"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 248,
+    "question": "Enantiomorphous crystals possess:",
+    "options": {
+      "A": "Both a plane and a centre of symmetry",
+      "B": "Only a plane",
+      "C": "Only a centre",
+      "D": "Neither a plane nor a centre of symmetry"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 249,
+    "question": "A zone axis is the:",
+    "options": {
+      "A": "Common edge direction of a zone",
+      "B": "Axis of a unit cell",
+      "C": "Direction of a face normal",
+      "D": "A crystallographic centre"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 250,
+    "question": "Intercept is the distance of a face from the:",
+    "options": {
+      "A": "Edge of the crystal",
+      "B": "Centre of the crystal along an axis",
+      "C": "Surface of the crystal",
+      "D": "Nearest zone"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 251,
+    "question": "Parameters are the:",
+    "options": {
+      "A": "Reciprocal of indices",
+      "B": "Face angles",
+      "C": "Ratio of intercepts",
+      "D": "Edge lengths"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 252,
+    "question": "Indices are obtained by:",
+    "options": {
+      "A": "Adding the parameters",
+      "B": "Squaring the parameters",
+      "C": "Subtracting the parameters",
+      "D": "Inverting the parameters and clearing fractions"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 253,
+    "question": "Parameters 1/4a : 1/3b : 1/2c give the indices:",
+    "options": {
+      "A": "(432)",
+      "B": "(123)",
+      "C": "(234)",
+      "D": "(342)"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 254,
+    "question": "Miller–Bravais indices apply to which system?",
+    "options": {
+      "A": "Isometric",
+      "B": "Hexagonal",
+      "C": "Triclinic",
+      "D": "Monoclinic"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 255,
+    "question": "The Miller–Bravais symbol has how many integers?",
+    "options": {
+      "A": "Two",
+      "B": "Three",
+      "C": "Four",
+      "D": "Five"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 256,
+    "question": "Weiss indices are converted to Miller indices by:",
+    "options": {
+      "A": "Doubling them",
+      "B": "Dropping the letters only",
+      "C": "Adding the intercepts",
+      "D": "Inversion and clearing fractions"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 257,
+    "question": "The face 2a : 3b : 6c has the Miller indices:",
+    "options": {
+      "A": "(321)",
+      "B": "(236)",
+      "C": "(632)",
+      "D": "(123)"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 258,
+    "question": "Which ratio would violate the law of rational indices?",
+    "options": {
+      "A": "1 : 2",
+      "B": "1 : √2",
+      "C": "2 : 3",
+      "D": "1 : 3"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 259,
+    "question": "Rational numbers are of the form p/q where:",
+    "options": {
+      "A": "p is not zero",
+      "B": "q is zero",
+      "C": "q is not zero",
+      "D": "p equals q"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 260,
+    "question": "A cube made of six similar faces is a:",
+    "options": {
+      "A": "Combination form",
+      "B": "Twin form",
+      "C": "Zone form",
+      "D": "Simple form"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 261,
+    "question": "A crystal showing both cube and octahedron faces is a:",
+    "options": {
+      "A": "Combination form",
+      "B": "Simple form",
+      "C": "Sextant form",
+      "D": "Euhedral form"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 262,
+    "question": "A crystal with all faces developed is:",
+    "options": {
+      "A": "Subhedral",
+      "B": "Euhedral",
+      "C": "Anhedral",
+      "D": "Amorphous"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 263,
+    "question": "A crystal with only some faces developed is:",
+    "options": {
+      "A": "Euhedral",
+      "B": "Anhedral",
+      "C": "Subhedral",
+      "D": "Enantiomorphic"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 264,
+    "question": "Plutonic rocks show:",
+    "options": {
+      "A": "Flowage structures",
+      "B": "Only vesicles",
+      "C": "Only fossils",
+      "D": "Structural features"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 265,
+    "question": "Volcanic rocks, formed at shallow depth, show:",
+    "options": {
+      "A": "Flowage structures",
+      "B": "Structural features of plutons",
+      "C": "Foliation",
+      "D": "Bedding"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 266,
+    "question": "A pluton is a body of consolidated magma that:",
+    "options": {
+      "A": "Erupted as lava",
+      "B": "Formed below the surface and is later exposed by erosion",
+      "C": "Formed from sediments",
+      "D": "Formed in space"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 267,
+    "question": "Concordant plutons are intruded:",
+    "options": {
+      "A": "Across bedding planes",
+      "B": "Only in volcanoes",
+      "C": "Along bedding planes",
+      "D": "Only on the ocean floor"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 268,
+    "question": "A sill is a concordant pluton in which:",
+    "options": {
+      "A": "All dimensions are equal",
+      "B": "It is circular in plan",
+      "C": "It is vertical",
+      "D": "Two dimensions are much greater than thickness"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 269,
+    "question": "A multiple sill forms by:",
+    "options": {
+      "A": "Two or more injections of the same magma",
+      "B": "A single injection",
+      "C": "Injection of different magmas",
+      "D": "Magmatic differentiation"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 270,
+    "question": "A composite sill forms by:",
+    "options": {
+      "A": "A single injection",
+      "B": "Two or more injections of magma of different composition",
+      "C": "Injections of the same magma",
+      "D": "Differentiation of one magma"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 271,
+    "question": "A differentiated sill forms by:",
+    "options": {
+      "A": "Simple injection",
+      "B": "Repeated same injections",
+      "C": "Magmatic differentiation",
+      "D": "Cauldron subsidence"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 272,
+    "question": "A simple sill forms by:",
+    "options": {
+      "A": "Two injections of different magmas",
+      "B": "Magmatic differentiation",
+      "C": "Cauldron subsidence",
+      "D": "A single injection of magma"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 273,
+    "question": "The laccolith type area is Henry Mountains in:",
+    "options": {
+      "A": "Utah",
+      "B": "Nevada",
+      "C": "California",
+      "D": "Alaska"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 274,
+    "question": "A laccolith dips:",
+    "options": {
+      "A": "Towards the centre",
+      "B": "Away from the centre in all directions",
+      "C": "Only to the north",
+      "D": "Vertically"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 275,
+    "question": "A lopolith dips:",
+    "options": {
+      "A": "Away from the centre",
+      "B": "Vertically",
+      "C": "Towards the centre from all sides",
+      "D": "Not at all"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 276,
+    "question": "A phacolith occurs in:",
+    "options": {
+      "A": "Fault zones only",
+      "B": "Volcanic vents only",
+      "C": "Ocean floors",
+      "D": "Crests and troughs of folds"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 277,
+    "question": "In a phacolith, at the trough portion the beds dip:",
+    "options": {
+      "A": "Towards the centre",
+      "B": "Away from the centre",
+      "C": "Vertically",
+      "D": "Parallel to the surface"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 278,
+    "question": "A bysmalith is similar to a batholith but covers an area:",
+    "options": {
+      "A": "Greater than 100 sq. km",
+      "B": "Less than 100 sq. km",
+      "C": "Exactly 100 sq. km",
+      "D": "Greater than 1000 sq. km"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 279,
+    "question": "A bysmalith is partly concordant and partly:",
+    "options": {
+      "A": "Volcanic",
+      "B": "Sedimentary",
+      "C": "Discordant",
+      "D": "Metamorphic"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 280,
+    "question": "Discordant plutons cut across:",
+    "options": {
+      "A": "Lava flows only",
+      "B": "Fossils",
+      "C": "Crystals",
+      "D": "Bedding planes"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 281,
+    "question": "A dyke is a:",
+    "options": {
+      "A": "Discordant pluton",
+      "B": "Concordant pluton",
+      "C": "Volcanic cone",
+      "D": "Sedimentary bed"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 282,
+    "question": "A multiple dyke forms by:",
+    "options": {
+      "A": "Different magmas",
+      "B": "Two or more injections of the same magma",
+      "C": "One injection",
+      "D": "Differentiation"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 283,
+    "question": "A composite dyke forms by:",
+    "options": {
+      "A": "One injection",
+      "B": "Same magma injections",
+      "C": "Injections of magma of different composition",
+      "D": "Cauldron collapse"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 284,
+    "question": "A differentiated dyke forms by:",
+    "options": {
+      "A": "Simple injection",
+      "B": "Multiple injection of the same magma",
+      "C": "Ring fracturing",
+      "D": "Magmatic differentiation"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 285,
+    "question": "Cone sheets dip towards the common centre at:",
+    "options": {
+      "A": "30° to 40°",
+      "B": "60° to 80°",
+      "C": "Vertical",
+      "D": "Horizontal"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 286,
+    "question": "Cone sheets belong to a concentric system that dips:",
+    "options": {
+      "A": "Outward",
+      "B": "Inward",
+      "C": "Vertically only",
+      "D": "Randomly"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 287,
+    "question": "A volcanic neck or plug is the:",
+    "options": {
+      "A": "Top of a volcano",
+      "B": "A lava flow",
+      "C": "Eroded root of a volcano",
+      "D": "A type of sill"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 288,
+    "question": "Cauldron subsidence is the process of formation of:",
+    "options": {
+      "A": "Sills",
+      "B": "Laccoliths",
+      "C": "Phacoliths",
+      "D": "Ring dykes"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 289,
+    "question": "A ring dyke in plan is:",
+    "options": {
+      "A": "Oval or arcuate",
+      "B": "Straight",
+      "C": "Square",
+      "D": "Irregular only"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 290,
+    "question": "Ring dykes reaching the surface are formed by:",
+    "options": {
+      "A": "Underground cauldron subsidence",
+      "B": "Surface cauldron subsidence",
+      "C": "Magmatic differentiation",
+      "D": "Simple injection"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 291,
+    "question": "A batholith has:",
+    "options": {
+      "A": "A clear visible floor",
+      "B": "A thin bedding",
+      "C": "No visible floor",
+      "D": "A volcano above it"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 292,
+    "question": "The roof pendant is the:",
+    "options": {
+      "A": "Floor of a batholith",
+      "B": "Neck of a volcano",
+      "C": "Edge of a sill",
+      "D": "Roof of a batholith"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 293,
+    "question": "The Sierra Nevada is an example of a:",
+    "options": {
+      "A": "Batholith",
+      "B": "Laccolith",
+      "C": "Lopolith",
+      "D": "Dyke"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 294,
+    "question": "A boss is a batholith with:",
+    "options": {
+      "A": "An irregular outcrop",
+      "B": "A circular outcrop",
+      "C": "A linear outcrop",
+      "D": "No outcrop"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 295,
+    "question": "A stock is an:",
+    "options": {
+      "A": "Circular batholith",
+      "B": "Concordant sill",
+      "C": "Irregular batholith of small area",
+      "D": "Volcanic vent"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 296,
+    "question": "The standard geological column shows:",
+    "options": {
+      "A": "Only igneous rocks",
+      "B": "Only fossils",
+      "C": "Only sedimentary basins of India",
+      "D": "The total succession of strata from oldest to youngest"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 297,
+    "question": "The geological time scale is composed of named time units that are:",
+    "options": {
+      "A": "Not stratigraphic units",
+      "B": "Stratigraphic units",
+      "C": "Rock units",
+      "D": "Soil units"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 298,
+    "question": "A Geological Time Unit is the time span during which:",
+    "options": {
+      "A": "A volcano erupted",
+      "B": "A sequence of strata was laid down",
+      "C": "A river flowed",
+      "D": "A glacier melted"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 299,
+    "question": "Which pair of chronostratigraphic units are formal?",
+    "options": {
+      "A": "Stage and chronozone",
+      "B": "Stage only",
+      "C": "Eonothem and erathem",
+      "D": "Chronozone only"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 300,
+    "question": "Which pair of chronostratigraphic units are informal?",
+    "options": {
+      "A": "Eonothem and erathem",
+      "B": "System and series",
+      "C": "Erathem and system",
+      "D": "Stage and chronozone"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 301,
+    "question": "Which pair of geochronologic terms are informal?",
+    "options": {
+      "A": "Age and chron",
+      "B": "Eon and era",
+      "C": "Period and epoch",
+      "D": "Eon and period"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 302,
+    "question": "The smallest formal geochronologic unit is the:",
+    "options": {
+      "A": "Epoch",
+      "B": "Period",
+      "C": "Age",
+      "D": "Chron"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 303,
+    "question": "Cryptozoic means:",
+    "options": {
+      "A": "Visible life",
+      "B": "New life",
+      "C": "Hidden life",
+      "D": "Marine life"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 304,
+    "question": "Phanerozoic is characterised by:",
+    "options": {
+      "A": "Hidden life",
+      "B": "No life",
+      "C": "Only bacteria",
+      "D": "Organic evolution"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 305,
+    "question": "The Eon is the:",
+    "options": {
+      "A": "Largest formal geochronologic term",
+      "B": "Smallest informal term",
+      "C": "Smallest formal term",
+      "D": "A chronozone"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 306,
+    "question": "The Precambrian is subdivided in the notes into Archaeozoic and:",
+    "options": {
+      "A": "Palaeozoic",
+      "B": "Proterozoic",
+      "C": "Mesozoic",
+      "D": "Cenozoic"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 307,
+    "question": "The mnemonic CMPPA lists the eras from:",
+    "options": {
+      "A": "Archaeozoic to Cenozoic",
+      "B": "Palaeozoic to Mesozoic",
+      "C": "Cenozoic to Archaeozoic",
+      "D": "Proterozoic to Palaeozoic"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 308,
+    "question": "In the mnemonic RPPMOEP, the first letter R stands for:",
+    "options": {
+      "A": "Rhaetian",
+      "B": "Roman",
+      "C": "Rift",
+      "D": "Recent"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 309,
+    "question": "The Palaeozoic periods in the mnemonic PCDSOC stand from Permian to:",
+    "options": {
+      "A": "Cambrian",
+      "B": "Cretaceous",
+      "C": "Jurassic",
+      "D": "Triassic"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 310,
+    "question": "The Mesozoic periods in the mnemonic CJT stand for:",
+    "options": {
+      "A": "Carboniferous, Jurassic, Tertiary",
+      "B": "Cretaceous, Jurassic, Triassic",
+      "C": "Cambrian, Jurassic, Triassic",
+      "D": "Cretaceous, Jurassic, Tertiary"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 311,
+    "question": "Which epoch name is used for Holocene in the notes?",
+    "options": {
+      "A": "Pliocene",
+      "B": "Eocene",
+      "C": "Recent",
+      "D": "Paleocene"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 312,
+    "question": "The Pennsylvanian and Mississippian are epochs of the:",
+    "options": {
+      "A": "Devonian",
+      "B": "Permian",
+      "C": "Silurian",
+      "D": "Carboniferous"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 313,
+    "question": "Which epoch belongs to the Neogene?",
+    "options": {
+      "A": "Miocene",
+      "B": "Eocene",
+      "C": "Oligocene",
+      "D": "Paleocene"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 314,
+    "question": "Which epoch belongs to the Palaeogene?",
+    "options": {
+      "A": "Pliocene",
+      "B": "Oligocene",
+      "C": "Miocene",
+      "D": "Pleistocene"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 315,
+    "question": "Which epoch belongs to the Quaternary?",
+    "options": {
+      "A": "Pliocene",
+      "B": "Miocene",
+      "C": "Pleistocene",
+      "D": "Eocene"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 316,
+    "question": "The suffix \"ian\" is used for names of:",
+    "options": {
+      "A": "Epochs",
+      "B": "Periods",
+      "C": "Eras",
+      "D": "Ages"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 317,
+    "question": "The Palaeozoic era begins with the:",
+    "options": {
+      "A": "Cambrian",
+      "B": "Ordovician",
+      "C": "Devonian",
+      "D": "Triassic"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 318,
+    "question": "The Palaeozoic era ends with the:",
+    "options": {
+      "A": "Triassic",
+      "B": "Permian",
+      "C": "Carboniferous",
+      "D": "Silurian"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 319,
+    "question": "Match the instrument with what it measures:\n\n| Instrument | Measures |\n|---|---|\n| A. Lysimeter | 1. Infiltration |\n| B. Double ring infiltrometer | 2. Consumptive use |\n| C. Stream gauge | 3. Surface run-off |\n| D. Potometer | 4. Transpiration |\n\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-2, B-1, C-4, D-3",
+      "C": "A-2, B-1, C-3, D-4",
+      "D": "A-3, B-1, C-2, D-4"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 320,
+    "question": "Match the study field with its subject:\n\n| Field | Subject |\n|---|---|\n| A. Cryology | 1. Lakes |\n| B. Limnology | 2. Snow and ice |\n| C. Potamology | 3. Surface streams |\n| D. Pedology | 4. Soil |\n\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-2, B-3, C-1, D-4",
+      "C": "A-4, B-1, C-3, D-2",
+      "D": "A-2, B-1, C-3, D-4"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 321,
+    "question": "Match the fault type with the vertical principal stress axis:\n\n| Fault | Vertical axis |\n|---|---|\n| A. Normal fault | 1. Greatest |\n| B. Thrust fault | 2. Least |\n| C. Strike-slip fault | 3. Intermediate |\n\n",
+    "options": {
+      "A": "A-1, B-2, C-3",
+      "B": "A-2, B-1, C-3",
+      "C": "A-3, B-2, C-1",
+      "D": "A-1, B-3, C-2"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 322,
+    "question": "Match the pluton with its feature:\n\n| Pluton | Feature |\n|---|---|\n| A. Laccolith | 1. Saucer shaped |\n| B. Lopolith | 2. Mushroom shaped |\n| C. Phacolith | 3. Found in fold crests and troughs |\n| D. Bysmalith | 4. Roof uplifted along a fault |\n\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-2, B-1, C-3, D-4",
+      "C": "A-2, B-1, C-4, D-3",
+      "D": "A-3, B-1, C-2, D-4"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 323,
+    "question": "Match the symmetry axis with the rotation needed:\n\n| Axis | Rotation |\n|---|---|\n| A. Two-fold | 1. 60° |\n| B. Three-fold | 2. 90° |\n| C. Four-fold | 3. 120° |\n| D. Six-fold | 4. 180° |\n\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-4, B-2, C-3, D-1",
+      "C": "A-4, B-3, C-2, D-1",
+      "D": "A-3, B-4, C-2, D-1"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 324,
+    "question": "Match the soil horizon with its name:\n\n| Horizon | Name |\n|---|---|\n| A. O | 1. Humus or organic |\n| B. A | 2. Topsoil |\n| C. B | 3. Subsoil |\n| D. R | 4. Bedrock |\n\n",
+    "options": {
+      "A": "A-2, B-1, C-3, D-4",
+      "B": "A-1, B-2, C-4, D-3",
+      "C": "A-1, B-3, C-2, D-4",
+      "D": "A-1, B-2, C-3, D-4"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 325,
+    "question": "Match the geochronologic term with its chronostratigraphic equivalent:\n\n| Geochronologic | Chronostratigraphic |\n|---|---|\n| A. Eon | 1. Eonothem |\n| B. Era | 2. Erathem |\n| C. Period | 3. System |\n| D. Epoch | 4. Series |\n\n",
+    "options": {
+      "A": "A-1, B-2, C-3, D-4",
+      "B": "A-2, B-1, C-3, D-4",
+      "C": "A-1, B-2, C-4, D-3",
+      "D": "A-1, B-3, C-2, D-4"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 326,
+    "question": "Match the fossil group with the period for which it is an index fossil:\n\n| Fossil | Period |\n|---|---|\n| A. Trilobites | 1. Cambrian and Ordovician |\n| B. Graptolites | 2. Ordovician and Silurian |\n| C. Ammonoids | 3. Devonian to Cretaceous |\n| D. Vertebrates | 4. Tertiary |\n\n",
+    "options": {
+      "A": "A-2, B-1, C-3, D-4",
+      "B": "A-1, B-2, C-3, D-4",
+      "C": "A-1, B-2, C-4, D-3",
+      "D": "A-1, B-3, C-2, D-4"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 327,
+    "question": "Match the Earth discontinuity with the layers it separates:\n\n| Discontinuity | Separates |\n|---|---|\n| A. Moho | 1. Crust and mantle |\n| B. Repetti | 2. Upper and lower mantle |\n| C. Gutenberg | 3. Mantle and outer core |\n| D. Lehmann | 4. Outer and inner core |\n\n",
+    "options": {
+      "A": "A-2, B-1, C-3, D-4",
+      "B": "A-1, B-2, C-4, D-3",
+      "C": "A-1, B-2, C-3, D-4",
+      "D": "A-1, B-3, C-2, D-4"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 328,
+    "question": "Arrange the Cenozoic epochs from oldest to youngest:\n1. Miocene\n2. Eocene\n3. Pliocene\n4. Paleocene\n5. Oligocene",
+    "options": {
+      "A": "2 → 4 → 5 → 1 → 3",
+      "B": "4 → 2 → 1 → 5 → 3",
+      "C": "3 → 1 → 5 → 2 → 4",
+      "D": "4 → 2 → 5 → 1 → 3"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 329,
+    "question": "Arrange the Palaeozoic periods from oldest to youngest:\n1. Silurian\n2. Cambrian\n3. Devonian\n4. Ordovician",
+    "options": {
+      "A": "2 → 4 → 1 → 3",
+      "B": "4 → 2 → 1 → 3",
+      "C": "2 → 1 → 4 → 3",
+      "D": "3 → 1 → 4 → 2"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 330,
+    "question": "Arrange the Mesozoic periods from oldest to youngest:\n1. Jurassic\n2. Cretaceous\n3. Triassic",
+    "options": {
+      "A": "1 → 3 → 2",
+      "B": "3 → 1 → 2",
+      "C": "2 → 1 → 3",
+      "D": "3 → 2 → 1"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 331,
+    "question": "Arrange the layers of the Earth from outside to inside:\n1. Outer core\n2. Crust\n3. Inner core\n4. Mantle",
+    "options": {
+      "A": "2 → 1 → 4 → 3",
+      "B": "4 → 2 → 1 → 3",
+      "C": "2 → 4 → 1 → 3",
+      "D": "2 → 4 → 3 → 1"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 332,
+    "question": "Arrange the soil horizons from top to bottom:\n1. B horizon\n2. O horizon\n3. R horizon\n4. A horizon\n5. C horizon",
+    "options": {
+      "A": "4 → 2 → 1 → 5 → 3",
+      "B": "2 → 4 → 5 → 1 → 3",
+      "C": "2 → 1 → 4 → 5 → 3",
+      "D": "2 → 4 → 1 → 5 → 3"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 333,
+    "question": "Arrange the geochronologic units from largest to smallest:\n1. Period\n2. Eon\n3. Epoch\n4. Era",
+    "options": {
+      "A": "2 → 4 → 1 → 3",
+      "B": "4 → 2 → 1 → 3",
+      "C": "2 → 1 → 4 → 3",
+      "D": "2 → 4 → 3 → 1"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 334,
+    "question": "Arrange the symmetry axes by increasing rotation angle:\n1. Four-fold\n2. Two-fold\n3. Six-fold\n4. Three-fold",
+    "options": {
+      "A": "2 → 4 → 1 → 3",
+      "B": "3 → 1 → 4 → 2",
+      "C": "3 → 4 → 1 → 2",
+      "D": "1 → 3 → 4 → 2"
+    },
+    "answer": "B"
+  }
+]
