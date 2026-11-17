@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCQ Practice</title>
+<link rel="icon" href="1791724182293.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="intro"><img src="intro-logo.png" alt=""></div>
+<style>
+  #intro {
+    position: fixed; inset: 0; z-index: 99999;
+    background: #0f172a;               /* same colour as your splash screen */
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  #intro img {
+    width: 45vw; max-width: 260px;
+    opacity: 0; transform: scale(0.6);
+    will-change: transform, opacity;
+  }
+  #intro.play img { animation: introZoom 2.4s ease-in forwards; }
+  #intro.play     { animation: introFade 2.4s linear forwards; }
+
+  @keyframes introZoom {
+    0%   { opacity: 0; transform: scale(0.6); }
+    20%  { opacity: 1; transform: scale(1); }     /* logo appears */
+    50%  { opacity: 1; transform: scale(1); }     /* short pause */
+    100% { opacity: 0; transform: scale(30); }    /* zooms past the screen */
+  }
+  @keyframes introFade {
+    0%, 70% { background: #0f172a; }
+    100%    { background: transparent; }           /* reveals the app */
+  }
+</style>
+<script>
+  (function () {
+    var intro = document.getElementById("intro");
+    var isApp = window.Capacitor && window.Capacitor.isNativePlatform &&
+                window.Capacitor.isNativePlatform();
+    if (!isApp) { intro.remove(); return; }       /* web version: no intro */
+
+    var img = intro.querySelector("img");
+    var sound = new Audio("intro-sound.mp3");
+    sound.preload = "auto";
+    sound.volume = 1.0;
+
+    var imgReady = img.complete, soundReady = false, started = false;
+
+    function start() {
+      if (started) return;
+      started = true;
+      intro.classList.add("play");                 /* starts the zoom */
+      sound.play().catch(function () {             /* if Android blocks it, play on first touch */
+        document.addEventListener("touchstart", function () {
+          sound.play().catch(function () {});
+        }, { once: true });
+      });
+      setTimeout(function () { intro.remove(); }, 2500);
+    }
+    function tryStart() { if (imgReady && soundReady) start(); }
+
+    img.onload = function () { imgReady = true; tryStart(); };
+    img.onerror = function () { intro.remove(); };
+    sound.addEventListener("canplaythrough", function () { soundReady = true; tryStart(); }, { once: true });
+    sound.load();
+    setTimeout(start, 1200);                       /* safety: never wait longer than 1.2 s */
+  })();
+</script>
+
+
+<div class="app" id="app">
+  <aside class="sidebar">
+    <div class="brand"><h1>MCQ Practice</h1><p>Interactive quiz app</p></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-bottom">
+      <div class="filebox" id="bankBox"></div>
+      <div class="total" id="total"></div>
+      <button class="linkbtn" id="authBtn"></button>
+      <button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme" aria-label="Toggle theme">
+        <svg id="themeMoon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="themeSun" viewBox="0 0 24 24" style="display:none"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-14V2m0 20v-2m8.94-6.94l1.41-1.41M3.65 3.65l1.41 1.41m2.83 11.67l-1.41 1.41M19.36 19.36l-1.41-1.41M2 12h2m16 0h2M4.22 4.22l1.41 1.41M18.36 18.36l1.41 1.41"/></svg>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </aside>
+  <main class="main"><div class="page" id="page"></div></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="localInput" accept=".json,application/json" hidden>
+
+<script src="app.js" defer></script>
+</body>
+</html>
