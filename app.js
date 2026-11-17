@@ -816,7 +816,7 @@ function quizActive() {
           yourAnswer: `${user}. ${options[user]}`, correctAnswer: `${correct}. ${options[correct]}`,
         });
       }
-      quizActive();
+      render();
     };
   } else if ($("#qSkip")) {
     $("#qSkip").onclick = () => {
@@ -825,7 +825,7 @@ function quizActive() {
       quiz.answered = false;
       quiz.chosen = "";
       quiz.opts = null;
-      quizActive();
+      render();
       window.scrollTo(0, 0);
     };
   } else if ($("#qNext")) {
@@ -834,9 +834,11 @@ function quizActive() {
     $("#qFinish").onclick = () => {
       quiz.active = false;
       quiz.results = true;
-      const pct = quiz.score / quiz.list.length;
-      const b = getBest();
-      if (!b || pct > (b.score / b.total)) setBest(quiz.score, quiz.list.length);
+      if (quiz.list.length > 0) {
+        const pct = quiz.score / quiz.list.length;
+        const b = getBest();
+        if (!b || pct > (b.score / b.total)) setBest(quiz.score, quiz.list.length);
+      }
       render();
       window.scrollTo(0, 0);
     };
